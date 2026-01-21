@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Ayurvedic Treatment Kits | SEJ Ayurveda</title>
+<meta name="description"
+content="Premium Ayurvedic treatment kits for skin problems and leucoderma. Carefully formulated holistic solutions by SEJ Ayurveda.">
+
+<link rel="icon" href="../../favicon.png">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+
+<style>
+
+/* ================= RESET ================= */
+*{margin:0;padding:0;box-sizing:border-box}
+body{
+  font-family:'Poppins',sans-serif;
+  background:#f8fafc;
+  color:#1f2937;
+  overflow-x:hidden;
+  padding-top:80px; /* INDEX HEADER HEIGHT */
+}
+.container{max-width:1200px;margin:auto;padding:0 20px}
+a{text-decoration:none}
+
+/* ================= HEADER (INDEX EXACT COPY) ================= */
+.header{
+  position:fixed;
+  top:0;left:0;right:0;
+  background:rgba(255,255,255,.96);
+  backdrop-filter:blur(20px);
+  border-bottom:1px solid rgba(16,185,129,.2);
+  z-index:1000;
+  transition:.3s;
+}
+.navbar{
+  height:80px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+.nav-brand img{height:44px}
+
+/* MENU */
+.nav-menu{
+  display:flex;
+  list-style:none;
+  gap:2.8rem;
+  white-space:nowrap;
+}
+.nav-link{
+  font-size:15px;
+  font-weight:500;
+  color:#374151;
+  position:relative;
+}
+.nav-link::after{
+  content:'';
+  position:absolute;
+  left:50%;
+  bottom:-6px;
+  width:0;
+  height:3px;
+  background:linear-gradient(90deg,#10b981,#059669);
+  transform:translateX(-50%);
+  transition:.3s;
+  border-radius:2px;
+}
+.nav-link:hover,
+.nav-link.active{color:#10b981}
+.nav-link:hover::after,
+.nav-link.active::after{width:100%}
+
+/* ACTIONS */
+.nav-actions{
+  display:flex;
+  align-items:center;
+  gap:1.2rem;
+}
+.btn{
+  padding:11px 22px;
+  border-radius:12px;
+  font-size:14px;
+  font-weight:500;
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+}
+.btn-outline{
+  border:2px solid #10b981;
+  color:#10b981;
+}
+.btn-outline:hover{
+  background:#10b981;
+  color:#fff;
+}
+.cart-btn{
+  position:relative;
+  border:2px solid #e5e7eb;
+  border-radius:12px;
+  padding:10px;
+}
+.cart-count{
+  position:absolute;
+  top:-6px;
+  right:-6px;
+  width:18px;
+  height:18px;
+  background:#ef4444;
+  color:#fff;
+  font-size:11px;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+/* ================= HERO ================= */
+.hero-section{
+  min-height:70vh;
+  display:flex;
+  align-items:center;
+  background:linear-gradient(135deg,#f0fdf4,#ecfeff);
+}
+.hero{
+  text-align:center;
+  max-width:800px;
+  margin:auto;
+}
+.hero h1{
+  font-size:clamp(2.4rem,5vw,3.5rem);
+  font-weight:700;
+  background:linear-gradient(135deg,#0f172a,#10b981);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+.hero p{
+  margin-top:1.2rem;
+  color:#475569;
+  font-size:1.1rem;
+}
+
+/* ================= KITS ================= */
+.section{padding:5.5rem 0;background:#fff}
+.section-title{
+  text-align:center;
+  font-size:2.4rem;
+  font-family:'Playfair Display',serif;
+}
+.section-desc{
+  text-align:center;
+  color:#64748b;
+  margin:1rem auto 3rem;
+  max-width:700px;
+}
+
+.kit-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:2.5rem;
+}
+.kit-card{
+  background:#f8fafc;
+  border:1px solid #e5e7eb;
+  border-radius:22px;
+  padding:2.2rem;
+  text-align:center;
+  transition:.35s;
+}
+.kit-card:hover{
+  transform:translateY(-10px);
+  box-shadow:0 30px 50px rgba(0,0,0,.12);
+}
+.kit-card img{
+  width:100%;
+  max-width:220px;
+  margin-bottom:1.4rem;
+}
+.kit-card h3{
+  color:#10b981;
+  margin-bottom:.6rem;
+}
+.kit-card p{
+  color:#475569;
+  font-size:.95rem;
+  line-height:1.6;
+}
+.kit-btn{
+  display:inline-block;
+  margin-top:1.4rem;
+  padding:10px 22px;
+  border-radius:10px;
+  border:2px solid #10b981;
+  color:#10b981;
+  font-size:14px;
+}
+.kit-btn:hover{background:#10b981;color:#fff}
+
+/* ================= CTA ================= */
+.cta-section{
+  padding:5rem 0;
+  background:#f0fdf4;
+  text-align:center;
+}
+.cta-section h2{
+  font-family:'Playfair Display',serif;
+  font-size:2.2rem;
+}
+.cta-section p{
+  margin:1rem auto 2rem;
+  color:#475569;
+  max-width:700px;
+}
+.cta-section .btn-outline{
+  padding:12px 26px;
+}
+
+/* ================= FOOTER ================= */
+.footer{
+  background:#0f172a;
+  color:#cbd5f5;
+  padding:3rem 0;
+  text-align:center;
+}
+.footer span{color:#10b981}
+
+@media(max-width:900px){
+  .kit-card img{max-width:180px}
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- ================= HEADER (INDEX EXACT) ================= -->
+<header class="header">
+<nav class="navbar container">
+
+  <div class="nav-brand">
+    <img src="../../assets/images/logo/sej-logo-dark.png">
+  </div>
+
+  <ul class="nav-menu">
+    <li><a href="../../index.html" class="nav-link">Home</a></li>
+    <li><a href="../diseases/" class="nav-link">Diseases</a></li>
+    <li><a href="./" class="nav-link active">Treatment Kits</a></li>
+    <li><a href="../consultation/" class="nav-link">Consultation</a></li>
+    <li><a href="../reviews/" class="nav-link">Reviews</a></li>
+    <li><a href="../vlog/" class="nav-link">Vlog</a></li>
+  </ul>
+
+  <div class="nav-actions">
+    <span style="color:#059669;font-weight:600;font-size:14px">
+      50000+ Patients
+    </span>
+    <a href="../consultation/" class="btn btn-outline">
+      Consult Now
+    </a>
+    <a href="../checkout/" class="cart-btn">
+      <img src="../../assets/images/ui/c.png" width="18">
+      <span class="cart-count">0</span>
+    </a>
+  </div>
+
+</nav>
+</header>
+
+<!-- ================= HERO ================= -->
+<section class="hero-section">
+  <div class="hero container">
+    <h1>Ayurvedic Treatment Kits</h1>
+    <p>
+      Carefully formulated Ayurvedic kits designed to support
+      chronic skin conditions through a holistic approach.
+    </p>
+  </div>
+</section>
+
+<!-- ================= KITS ================= -->
+<section class="section">
+<div class="container">
+  <h2 class="section-title">Available Treatment Kits</h2>
+  <p class="section-desc">
+    Choose from our specialised Ayurvedic kits or consult our expert
+    for personalised guidance.
+  </p>
+
+  <div class="kit-grid">
+
+    <div class="kit-card">
+      <img src="../../assets/images/kits/skin-problem-kit/kit-front.png">
+      <h3>Skin Problem Treatment Kit</h3>
+      <p>
+        Ayurvedic support for acne, eczema, pigmentation,
+        itching and chronic skin imbalance.
+      </p>
+      <a href="./skin-problem-kit.html" class="kit-btn">View Kit Details</a>
+    </div>
+
+    <div class="kit-card">
+      <img src="../../assets/images/kits/leucoderma-kit/kit-front.png">
+      <h3>Leucoderma Support Kit</h3>
+      <p>
+        Holistic Ayurvedic care focusing on digestion,
+        immunity and skin pigmentation balance.
+      </p>
+      <a href="./leucoderma-kit.html" class="kit-btn">View Kit Details</a>
+    </div>
+
+  </div>
+</div>
+</section>
+
+<!-- ================= CTA ================= -->
+<section class="cta-section">
+  <div class="container">
+    <h2>Need Guidance Before Ordering?</h2>
+    <p>
+      Consultation is optional. You may directly order kits
+      or consult our Ayurvedic expert for personalised advice.
+    </p>
+    <a href="../consultation/" class="btn btn-outline">
+      Book Optional Consultation
+    </a>
+  </div>
+</section>
+<!-- ===== FLOATING WHATSAPP BUTTON ===== -->
+<a href="javascript:void(0)"
+   class="whatsapp-float"
+   onclick="openWhatsApp()"
+   aria-label="Chat on WhatsApp">
+   <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
+        alt="WhatsApp Chat">
+</a>
+
+<style>
+/* ===== WHATSAPP FLOATING BUTTON ===== */
+.whatsapp-float{
+  position:fixed;
+  bottom:22px;
+  right:22px;
+  width:58px;
+  height:58px;
+  background:#25D366;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  box-shadow:0 12px 30px rgba(37,211,102,.45);
+  z-index:9999;
+  cursor:pointer;
+  transition:.3s;
+}
+.whatsapp-float img{
+  width:30px;
+  height:30px;
+}
+.whatsapp-float:hover{
+  transform:scale(1.08);
+  background:#1ebe5d;
+}
+
+/* Mobile safe spacing */
+@media(max-width:600px){
+  .whatsapp-float{
+    bottom:16px;
+    right:16px;
+  }
+}
+</style>
+
+<script>
+function openWhatsApp(){
+  const phone = "919870317940"; // ✅ correct format
+  const message = "Hello SEJ Ayurveda, I want consultation.";
+
+  const isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+  const url = isMobile
+    ? "https://wa.me/" + phone + "?text=" + encodeURIComponent(message)
+    : "https://web.whatsapp.com/send?phone=" + phone + "&text=" + encodeURIComponent(message);
+
+  window.open(url, "_blank");
+}
+</script>
+<!-- ===== END WHATSAPP BUTTON ===== -->
+
+<!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-flex">
+      <p>© 2015 SEJ Ayurveda. All rights reserved.</p> |      
+      <a href="../legal/privacy.html">Privacy Policy</a> |
+      <a href="../legal/terms.html">Terms</a> |
+      <a href="../legal/refund.html">Refund</a> |
+      <a href="../legal/about.html">About Us</a> |
+    </div>
+  </footer>
+</body>
+</html>

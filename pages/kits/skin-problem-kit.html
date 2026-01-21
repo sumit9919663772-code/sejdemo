@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Skin Problem Treatment Kit | Ayurvedic Care | SEJ Ayurveda</title>
+
+<meta name="description"
+content="Skin Problem Ayurvedic Treatment Kit by SEJ Ayurveda for acne, eczema, psoriasis, pigmentation, fungal infections and chronic itching. Herbal formulation supporting digestion, blood purification and skin balance.">
+
+<meta name="keywords"
+content="skin problem ayurvedic treatment, acne ayurveda, eczema ayurvedic medicine, psoriasis herbal treatment, pigmentation ayurveda">
+
+<link rel="icon" href="../../favicon.png">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+
+<style>
+
+/* ================= RESET ================= */
+*{margin:0;padding:0;box-sizing:border-box}
+body{
+  font-family:'Poppins',sans-serif;
+  background:#f8fafc;
+  color:#1f2937;
+  overflow-x:hidden;
+  padding-top:80px; /* INDEX HEADER HEIGHT */
+}
+.container{max-width:1200px;margin:auto;padding:0 20px}
+a{text-decoration:none}
+
+/* ================= HEADER (INDEX MASTER – EXACT) ================= */
+.header{
+  position:fixed;
+  top:0;left:0;right:0;
+  background:rgba(255,255,255,.96);
+  backdrop-filter:blur(20px);
+  border-bottom:1px solid rgba(16,185,129,.2);
+  z-index:1000;
+  transition:.3s;
+}
+.navbar{
+  height:80px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+.nav-brand img{height:44px}
+
+/* MENU */
+.nav-menu{
+  display:flex;
+  list-style:none;
+  gap:2.8rem;
+  white-space:nowrap;
+}
+.nav-link{
+  font-size:15px;
+  font-weight:500;
+  color:#374151;
+  position:relative;
+}
+.nav-link::after{
+  content:'';
+  position:absolute;
+  left:50%;
+  bottom:-6px;
+  width:0;
+  height:3px;
+  background:linear-gradient(90deg,#10b981,#059669);
+  transform:translateX(-50%);
+  transition:.3s;
+  border-radius:2px;
+}
+.nav-link:hover,
+.nav-link.active{color:#10b981}
+.nav-link:hover::after,
+.nav-link.active::after{width:100%}
+
+/* ACTIONS */
+.nav-actions{
+  display:flex;
+  align-items:center;
+  gap:1.2rem;
+}
+.btn{
+  padding:11px 22px;
+  border-radius:12px;
+  font-size:14px;
+  font-weight:500;
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+}
+.btn-outline{
+  border:2px solid #10b981;
+  color:#10b981;
+}
+.btn-outline:hover{
+  background:#10b981;
+  color:#fff;
+}
+.cart-btn{
+  position:relative;
+  border:2px solid #e5e7eb;
+  border-radius:12px;
+  padding:10px;
+}
+.cart-count{
+  position:absolute;
+  top:-6px;
+  right:-6px;
+  width:18px;
+  height:18px;
+  background:#ef4444;
+  color:#fff;
+  font-size:11px;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+/* ================= HERO ================= */
+.hero{
+  min-height:90vh;
+  display:flex;
+  align-items:center;
+  background:linear-gradient(135deg,#f0fdf4,#ecfeff);
+}
+.hero-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:4rem;
+  align-items:center;
+}
+.hero h1{
+  font-size:clamp(2.4rem,5vw,3.6rem);
+  font-weight:700;
+  background:linear-gradient(135deg,#0f172a,#10b981);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+.hero p{
+  margin-top:1.4rem;
+  color:#475569;
+  font-size:1.1rem;
+  line-height:1.8;
+}
+.hero img{
+  width:100%;
+  max-width:420px;
+  border-radius:22px;
+  box-shadow:0 30px 60px rgba(0,0,0,.15);
+}
+
+/* PRICE BOX */
+.price-box{
+  margin-top:2rem;
+  background:#ffffff;
+  border:1px solid #e5e7eb;
+  padding:2rem;
+  border-radius:20px;
+}
+.mrp{text-decoration:line-through;color:#94a3b8}
+.price{font-size:2rem;font-weight:700;color:#10b981}
+.delivery{margin-top:.4rem;color:#475569}
+.total{margin-top:.8rem;font-weight:600}
+.buy-btn{
+  display:inline-block;
+  margin-top:1.5rem;
+  padding:12px 30px;
+  border-radius:12px;
+  background:linear-gradient(135deg,#10b981,#059669);
+  color:#fff;
+  font-size:15px;
+  border:none;
+  cursor:pointer;
+}
+.buy-btn:hover{opacity:.92}
+
+/* CONTENT */
+.section{padding:5.5rem 0;background:#fff}
+.section.alt{background:#f0fdf4}
+.grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:3.5rem;
+  align-items:center;
+}
+.section h2{color:#10b981;margin-bottom:1rem}
+.section p{color:#475569;line-height:1.8;margin-bottom:1rem}
+.section img{
+  width:100%;
+  border-radius:22px;
+  box-shadow:0 20px 40px rgba(0,0,0,.12);
+}
+
+/* INGREDIENTS */
+.ingredients{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+  gap:1.8rem;
+  margin-top:2.5rem;
+}
+.ingredient-card{
+  background:#f8fafc;
+  border:1px solid #e5e7eb;
+  padding:1.8rem;
+  border-radius:18px;
+}
+.ingredient-card h4{
+  color:#10b981;
+  margin-bottom:.4rem;
+}
+
+/* FOOTER */
+.footer{
+  background:#0f172a;
+  color:#cbd5f5;
+  padding:3rem 0;
+  text-align:center;
+}
+.footer span{color:#10b981}
+
+@media(max-width:900px){
+  .hero-grid,.grid{grid-template-columns:1fr;text-align:center}
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- ================= HEADER (INDEX EXACT) ================= -->
+<header class="header">
+<nav class="navbar container">
+
+  <div class="nav-brand">
+    <img src="../../assets/images/logo/sej-logo-dark.png">
+  </div>
+
+  <ul class="nav-menu">
+    <li><a href="../../index.html" class="nav-link">Home</a></li>
+    <li><a href="../diseases/" class="nav-link">Diseases</a></li>
+    <li><a href="./" class="nav-link active">Treatment Kits</a></li>
+    <li><a href="../consultation/" class="nav-link">Consultation</a></li>
+    <li><a href="../reviews/" class="nav-link">Reviews</a></li>
+    <li><a href="../vlog/" class="nav-link">Vlog</a></li>
+  </ul>
+
+  <div class="nav-actions">
+    <span style="color:#059669;font-weight:600;font-size:14px">
+      50000+ Patients
+    </span>
+    <a href="../consultation/" class="btn btn-outline">
+      Consult Now
+    </a>
+    <a href="../checkout/" class="cart-btn">
+      <img src="../../assets/images/ui/cart-icon.png" width="18">
+      <span class="cart-count">0</span>
+    </a>
+  </div>
+
+</nav>
+</header>
+
+<!-- ================= HERO ================= -->
+<section class="hero">
+<div class="container hero-grid">
+
+  <div>
+    <h1>Skin Problem Treatment Kit</h1>
+    <p>
+      Ayurvedic herbal formulation designed to support acne, eczema,
+      psoriasis, pigmentation, fungal infections and chronic itching
+      by improving digestion, blood purification and internal balance.
+    </p>
+
+    <div class="price-box">
+      <div class="mrp">MRP: ₹3000</div>
+      <div class="price">Offer Price: ₹2500</div>
+      <div class="delivery">Delivery Charges: ₹100</div>
+      <div class="total">Total Payable: ₹2600</div>
+
+      <button class="buy-btn" data-buy-kit="skin-problem-kit">
+        Buy Now
+      </button>
+    </div>
+  </div>
+
+  <img src="../../assets/images/kits/skin-problem-kit/kit-front.png"
+       alt="Skin Problem Ayurvedic Treatment Kit">
+
+</div>
+</section>
+
+<!-- ================= DESCRIPTION ================= -->
+<section class="section">
+<div class="container grid">
+
+  <img src="../../assets/images/kits/skin-problem-kit/kit-contents.png">
+
+  <div>
+    <h2>About This Ayurvedic Kit</h2>
+    <p>
+      In Ayurveda, skin health is closely connected with digestion,
+      blood quality and toxin accumulation. This kit focuses on
+      correcting internal imbalance rather than surface-level relief.
+    </p>
+    <p>
+      Consistent use along with proper diet and lifestyle guidance
+      supports clearer, healthier and more balanced skin.
+    </p>
+  </div>
+
+</div>
+</section>
+
+<!-- ================= INGREDIENTS ================= -->
+<section class="section alt">
+<div class="container">
+
+  <h2 style="text-align:center">Key Herbal Ingredients</h2>
+
+  <div class="ingredients">
+    <div class="ingredient-card"><h4>Manjistha</h4><p>Supports blood purification and skin detoxification.</p></div>
+    <div class="ingredient-card"><h4>Neem</h4><p>Traditionally used for skin cleanliness and immunity support.</p></div>
+    <div class="ingredient-card"><h4>Guduchi</h4><p>Helps strengthen immunity and internal resistance.</p></div>
+    <div class="ingredient-card"><h4>Haridra (Turmeric)</h4><p>Supports inflammatory balance and skin nourishment.</p></div>
+    <div class="ingredient-card"><h4>Triphala</h4><p>Supports digestion and gentle detoxification.</p></div>
+    <div class="ingredient-card"><h4>Ayurvedic Herbal Blend</h4><p>Synergistic formulation prepared under expert supervision.</p></div>
+  </div>
+
+</div>
+</section>
+
+<!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-flex">
+      <p>© 2015 SEJ Ayurveda. All rights reserved.</p> |      
+      <a href="../legal/privacy.html">Privacy Policy</a> |
+      <a href="../legal/terms.html">Terms</a> |
+      <a href="../legal/refund.html">Refund</a> |
+      <a href="../legal/about.html">About Us</a> |
+    </div>
+  </footer>
+<script>
+document.querySelectorAll("[data-buy-kit]").forEach(btn=>{
+  btn.addEventListener("click",()=>{
+    const kit=btn.getAttribute("data-buy-kit");
+    window.location.href="../../pages/checkout/index.html?kit="+kit;
+  });
+});
+</script>
+<!-- ===== FLOATING WHATSAPP BUTTON ===== -->
+<a href="javascript:void(0)"
+   class="whatsapp-float"
+   onclick="openWhatsApp()"
+   aria-label="Chat on WhatsApp">
+   <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
+        alt="WhatsApp Chat">
+</a>
+
+<style>
+/* ===== WHATSAPP FLOATING BUTTON ===== */
+.whatsapp-float{
+  position:fixed;
+  bottom:22px;
+  right:22px;
+  width:58px;
+  height:58px;
+  background:#25D366;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  box-shadow:0 12px 30px rgba(37,211,102,.45);
+  z-index:9999;
+  cursor:pointer;
+  transition:.3s;
+}
+.whatsapp-float img{
+  width:30px;
+  height:30px;
+}
+.whatsapp-float:hover{
+  transform:scale(1.08);
+  background:#1ebe5d;
+}
+
+/* Mobile safe spacing */
+@media(max-width:600px){
+  .whatsapp-float{
+    bottom:16px;
+    right:16px;
+  }
+}
+</style>
+
+<script>
+function openWhatsApp(){
+  const phone = "919870317940"; // ✅ correct format
+  const message = "Hello SEJ Ayurveda, I want consultation.";
+
+  const isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+  const url = isMobile
+    ? "https://wa.me/" + phone + "?text=" + encodeURIComponent(message)
+    : "https://web.whatsapp.com/send?phone=" + phone + "&text=" + encodeURIComponent(message);
+
+  window.open(url, "_blank");
+}
+</script>
+<!-- ===== END WHATSAPP BUTTON ===== -->
+
+</body>
+</html>

@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Partial Payment | SEJ Ayurveda</title>
+
+<link rel="icon" href="../../favicon.png">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+/* ================= RESET ================= */
+*{margin:0;padding:0;box-sizing:border-box}
+body{
+  font-family:'Poppins',sans-serif;
+  background:#f1f5f9;
+  color:#1f2937;
+  overflow-x:hidden;
+  padding-top:80px;
+}
+a{text-decoration:none}
+
+/* ================= CONTAINERS ================= */
+.container{
+  max-width:1200px;
+  margin:auto;
+  padding:0 20px;
+}
+.container-narrow{
+  max-width:800px;
+  margin:auto;
+  padding:0 20px;
+}
+
+/* ================= HEADER (INDEX EXACT) ================= */
+.header{
+  position:fixed;
+  top:0;left:0;right:0;
+  background:rgba(255,255,255,.96);
+  backdrop-filter:blur(20px);
+  border-bottom:1px solid rgba(16,185,129,.2);
+  z-index:1000;
+  transition:.3s;
+}
+.navbar{
+  height:80px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+.nav-brand img{height:44px}
+
+/* MENU */
+.nav-menu{
+  display:flex;
+  list-style:none;
+  gap:2.8rem;
+  white-space:nowrap;
+}
+.nav-link{
+  font-size:15px;
+  font-weight:500;
+  color:#374151;
+  position:relative;
+}
+.nav-link::after{
+  content:'';
+  position:absolute;
+  left:50%;
+  bottom:-6px;
+  width:0;
+  height:3px;
+  background:linear-gradient(90deg,#10b981,#059669);
+  transform:translateX(-50%);
+  transition:.3s;
+  border-radius:2px;
+}
+.nav-link:hover,
+.nav-link.active{color:#10b981}
+.nav-link:hover::after,
+.nav-link.active::after{width:100%}
+
+/* ACTIONS */
+.nav-actions{
+  display:flex;
+  align-items:center;
+  gap:1.2rem;
+}
+.btn{
+  padding:11px 22px;
+  border-radius:12px;
+  font-size:14px;
+  font-weight:500;
+}
+.btn-outline{
+  border:2px solid #10b981;
+  color:#10b981;
+}
+.btn-outline:hover{
+  background:#10b981;
+  color:#fff;
+}
+.cart-btn{
+  position:relative;
+  border:2px solid #e5e7eb;
+  border-radius:12px;
+  padding:10px;
+}
+.cart-count{
+  position:absolute;
+  top:-6px;
+  right:-6px;
+  width:18px;
+  height:18px;
+  background:#ef4444;
+  color:#fff;
+  font-size:11px;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+/* ================= MAIN ================= */
+.main{
+  padding-top:40px;
+  padding-bottom:4rem;
+}
+
+/* CARD */
+.card{
+  background:#fff;
+  border-radius:22px;
+  padding:2.5rem;
+  box-shadow:0 25px 50px rgba(0,0,0,.08);
+}
+.card h1{
+  color:#10b981;
+  margin-bottom:1rem;
+}
+
+/* SUMMARY */
+.summary{
+  background:#f8fafc;
+  border:1px solid #e5e7eb;
+  border-radius:16px;
+  padding:1.4rem;
+  margin:1.5rem 0;
+}
+.summary p{margin-bottom:.6rem}
+
+/* INFO */
+.info{
+  background:#f3f4f6;
+  border-left:4px solid #9ca3af;
+  padding:1rem 1.2rem;
+  border-radius:12px;
+  color:#374151;
+  margin-bottom:1.5rem;
+  font-size:14px;
+}
+
+/* PAYMENT */
+.pay-box{
+  border:1px solid #e5e7eb;
+  border-radius:16px;
+  padding:1.6rem;
+}
+.payment-methods{
+  display:grid;
+  gap:1rem;
+  margin-top:1.2rem;
+}
+.payment-option{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:1rem 1.2rem;
+  border:1px solid #e5e7eb;
+  border-radius:14px;
+  cursor:pointer;
+  transition:.25s;
+}
+.payment-option:hover{
+  border-color:#10b981;
+  background:#f0fdf4;
+}
+.payment-left{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  font-size:15px;
+  font-weight:500;
+}
+
+/* BUTTON */
+.pay-btn{
+  width:100%;
+  margin-top:1.8rem;
+  padding:16px;
+  border-radius:16px;
+  border:none;
+  font-size:16px;
+  font-weight:600;
+  background:linear-gradient(135deg,#10b981,#059669);
+  color:#fff;
+  cursor:pointer;
+}
+.pay-btn:hover{opacity:.92}
+
+/* NOTE */
+.note{
+  margin-top:1.8rem;
+  text-align:center;
+  font-size:13px;
+  color:#64748b;
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- ================= HEADER (INDEX EXACT) ================= -->
+<header class="header">
+<nav class="navbar container">
+
+  <div class="nav-brand">
+    <img src="../../assets/images/logo/sej-logo-dark.png" alt="SEJ Ayurveda">
+  </div>
+
+  <ul class="nav-menu">
+    <li><a href="../../index.html" class="nav-link">Home</a></li>
+    <li><a href="../diseases/" class="nav-link">Diseases</a></li>
+    <li><a href="../kits/" class="nav-link">Treatment Kits</a></li>
+    <li><a href="../consultation/" class="nav-link">Consultation</a></li>
+    <li><a href="../reviews/" class="nav-link">Reviews</a></li>
+    <li><a href="../vlog/" class="nav-link">Vlog</a></li>
+  </ul>
+
+  <div class="nav-actions">
+    <span style="color:#059669;font-weight:600;font-size:14px">50000+ Patients</span>
+    <a href="../consultation/" class="btn btn-outline">Consult Now</a>
+    <a href="../checkout/" class="cart-btn">
+      <img src="../../assets/images/ui/cart-icon.png" width="18">
+      <span class="cart-count">0</span>
+    </a>
+  </div>
+
+</nav>
+</header>
+
+<!-- ================= MAIN ================= -->
+<section class="main">
+<div class="container-narrow">
+
+<div class="card">
+  <h1>Partial Payment</h1>
+
+  <div class="summary">
+    <p><strong>Product:</strong> <span id="kitName"></span></p>
+    <p><strong>Total Order Value:</strong> ₹<span id="kitPrice"></span></p>
+    <p><strong>Delivery Charges:</strong> ₹100</p>
+  </div>
+
+  <div class="info">
+    Cash on Delivery <strong>(COD)</strong> is not available.
+    Please pay a small advance to confirm your order.
+  </div>
+
+  <div class="pay-box">
+    <h2 style="color:#10b981;margin-bottom:.6rem">Pay ₹150 Now</h2>
+    <p style="font-size:14px;color:#475569">
+      Select a payment method to continue
+    </p>
+
+    <div class="payment-methods">
+      <label class="payment-option">
+        <div class="payment-left">
+          <input type="radio" name="pay" checked>
+          PhonePe / UPI
+        </div>
+      </label>
+      <label class="payment-option">
+        <div class="payment-left">
+          <input type="radio" name="pay">
+          Google Pay
+        </div>
+      </label>
+      <label class="payment-option">
+        <div class="payment-left">
+          <input type="radio" name="pay">
+          Paytm
+        </div>
+      </label>
+      <label class="payment-option">
+        <div class="payment-left">
+          <input type="radio" name="pay">
+          Net Banking
+        </div>
+      </label>
+    </div>
+
+    <button class="pay-btn" id="payNowBtn">
+      Pay ₹150 Securely
+    </button>
+  </div>
+
+  <div class="note">
+    100% secure payment • Trusted by 50000+ patients
+  </div>
+</div>
+
+</div>
+</section>
+
+<script>
+const params=new URLSearchParams(window.location.search);
+const kit=params.get("kit");
+let name="",price=0;
+if(kit==="leucoderma-syrup-kit"){name="Leucoderma Syrup Kit";price=800}
+if(kit==="skin-problem-kit"){name="Skin Problem Treatment Kit";price=2500}
+kitName.innerText=name;
+kitPrice.innerText=price;
+
+payNowBtn.onclick=()=>{
+  alert(
+    "Online payment gateway is not active yet.\n\n"+
+    "Razorpay integration is under process.\n"+
+    "Please try again shortly or contact support."
+  );
+};
+</script>
+<!-- ===== FLOATING WHATSAPP BUTTON ===== -->
+<a href="javascript:void(0)"
+   class="whatsapp-float"
+   onclick="openWhatsApp()"
+   aria-label="Chat on WhatsApp">
+   <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
+        alt="WhatsApp Chat">
+</a>
+
+<style>
+/* ===== WHATSAPP FLOATING BUTTON ===== */
+.whatsapp-float{
+  position:fixed;
+  bottom:22px;
+  right:22px;
+  width:58px;
+  height:58px;
+  background:#25D366;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  box-shadow:0 12px 30px rgba(37,211,102,.45);
+  z-index:9999;
+  cursor:pointer;
+  transition:.3s;
+}
+.whatsapp-float img{
+  width:30px;
+  height:30px;
+}
+.whatsapp-float:hover{
+  transform:scale(1.08);
+  background:#1ebe5d;
+}
+
+/* Mobile safe spacing */
+@media(max-width:600px){
+  .whatsapp-float{
+    bottom:16px;
+    right:16px;
+  }
+}
+</style>
+
+<script>
+function openWhatsApp(){
+  const phone = "919870317940"; // ✅ correct format
+  const message = "Hello SEJ Ayurveda, I want consultation.";
+
+  const isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+  const url = isMobile
+    ? "https://wa.me/" + phone + "?text=" + encodeURIComponent(message)
+    : "https://web.whatsapp.com/send?phone=" + phone + "&text=" + encodeURIComponent(message);
+
+  window.open(url, "_blank");
+}
+</script>
+<!-- ===== END WHATSAPP BUTTON ===== -->
+
+</body>
+</html>

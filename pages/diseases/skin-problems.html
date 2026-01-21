@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Skin Problems | Ayurvedic Care | SEJ Ayurveda</title>
+<meta name="description"
+content="Ayurvedic care for acne, psoriasis, eczema, fungal infections, pigmentation and chronic skin diseases. A vlog-style Ayurvedic guide by SEJ Ayurveda.">
+
+<link rel="icon" href="../../favicon.png">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{
+  font-family:'Poppins',sans-serif;
+  background:#f8fafc;
+  color:#1f2937;
+  overflow-x:hidden;
+  padding-top:80px;
+}
+.container{max-width:1200px;margin:auto;padding:0 20px}
+a{text-decoration:none}
+
+/* HEADER */
+.header{
+  position:fixed;top:0;left:0;right:0;
+  background:rgba(255,255,255,.96);
+  backdrop-filter:blur(20px);
+  border-bottom:1px solid rgba(16,185,129,.2);
+  z-index:1000;
+}
+.navbar{
+  height:80px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+.nav-brand img{height:44px}
+.nav-menu{
+  display:flex;
+  list-style:none;
+  gap:2.8rem;
+}
+.nav-link{
+  font-size:15px;
+  font-weight:500;
+  color:#374151;
+  position:relative;
+}
+.nav-link::after{
+  content:'';
+  position:absolute;
+  left:50%;
+  bottom:-6px;
+  width:0;height:3px;
+  background:#10b981;
+  transform:translateX(-50%);
+  transition:.3s;
+}
+.nav-link:hover,
+.nav-link.active{color:#10b981}
+.nav-link:hover::after,
+.nav-link.active::after{width:100%}
+
+.nav-actions{
+  display:flex;
+  align-items:center;
+  gap:1.2rem;
+}
+.btn-outline{
+  border:2px solid #10b981;
+  color:#10b981;
+  padding:11px 22px;
+  border-radius:12px;
+  font-size:14px;
+  font-weight:500;
+}
+.btn-outline:hover{background:#10b981;color:#fff}
+.cart-btn{
+  position:relative;
+  border:2px solid #e5e7eb;
+  border-radius:12px;
+  padding:10px;
+}
+.cart-count{
+  position:absolute;
+  top:-6px;
+  right:-6px;
+  width:18px;
+  height:18px;
+  background:#ef4444;
+  color:#fff;
+  font-size:11px;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+/* HERO */
+.hero-section{
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  padding-top:90px;
+  background:linear-gradient(135deg,#f0fdf4,#ecfeff);
+}
+.hero{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:4rem;
+  align-items:center;
+}
+.hero-title{
+  font-size:clamp(2.6rem,5vw,3.8rem);
+  font-weight:700;
+  background:linear-gradient(135deg,#0f172a,#10b981);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+.hero-subtitle{
+  margin-top:1.5rem;
+  color:#475569;
+  font-size:1.15rem;
+}
+.hero img{
+  width:100%;
+  max-width:420px;
+  border-radius:22px;
+  box-shadow:0 30px 60px rgba(0,0,0,.15);
+}
+
+/* SECTIONS */
+.section{padding:5.5rem 0;background:#fff}
+.section.alt{background:#f0fdf4}
+.zigzag{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:3.5rem;
+  align-items:center;
+}
+.zigzag h2{color:#10b981;margin-bottom:1rem}
+.zigzag p{color:#475569;line-height:1.8;margin-bottom:1rem}
+.zigzag img{
+  width:100%;
+  border-radius:22px;
+  box-shadow:0 20px 40px rgba(0,0,0,.12);
+}
+.more-btn{
+  display:inline-block;
+  margin-top:1rem;
+  border:2px solid #10b981;
+  padding:10px 20px;
+  border-radius:10px;
+  color:#10b981;
+  font-size:14px;
+}
+.more-btn:hover{background:#10b981;color:#fff}
+
+/* FOOTER */
+.footer{
+  background:#0f172a;
+  color:#cbd5f5;
+  padding:3rem 0;
+  text-align:center;
+}
+.footer span{color:#10b981}
+
+@media(max-width:900px){
+  .hero,.zigzag{grid-template-columns:1fr;text-align:center}
+}
+</style>
+</head>
+
+<body>
+
+<header class="header">
+<nav class="navbar container">
+
+  <a href="../../index.html" class="nav-brand">
+    <img src="../../assets/images/logo/sej-logo-dark.png">
+  </a>
+
+  <ul class="nav-menu">
+    <li><a href="../../index.html" class="nav-link">Home</a></li>
+    <li><a href="../diseases/" class="nav-link active">Diseases</a></li>
+    <li><a href="../kits/" class="nav-link">Treatment Kits</a></li>
+    <li><a href="../consultation/" class="nav-link">Consultation</a></li>
+    <li><a href="../reviews/" class="nav-link">Reviews</a></li>
+    <li><a href="../vlog/" class="nav-link">Vlog</a></li>
+  </ul>
+
+  <div class="nav-actions">
+    <span style="color:#059669;font-weight:600;font-size:14px">50000+ Patients</span>
+    <a href="../consultation/" class="btn-outline">Consult Now</a>
+    <a href="../checkout/" class="cart-btn">
+      <img src="../../assets/images/ui/c.png" width="18">
+      <span class="cart-count">0</span>
+    </a>
+  </div>
+
+</nav>
+</header>
+
+<section class="hero-section">
+<div class="hero container">
+  <div>
+    <h1 class="hero-title">Skin Problems & Ayurvedic Care</h1>
+    <p class="hero-subtitle">
+      A vlog-style Ayurvedic guide explaining different skin diseases,
+      their causes, daily care, do’s & don’ts.
+    </p>
+  </div>
+  <img src="../../assets/images/diseases/skin-problems/ChatGPT Image Jan 19, 2026, 01_08_58 PM.png">
+</div>
+</section>
+
+<!-- 1 -->
+<section class="section">
+<div class="container zigzag">
+  <div>
+    <h2>Acne & Pimples</h2>
+    <p>Acne is a common skin problem that occurs when the pores of the skin become clogged with excess oil (sebum), dead skin cells, and bacteria. As a result, pimples, whiteheads, blackheads, and sometimes painful red bumps develop on the skin.</p>
+    <a href="../vlog/acne.html" class="more-btn">Get More Info</a>
+  </div>
+  <img src="../../assets/images/diseases/skin-problems/shutterstock_641911651.png">
+</div>
+</section>
+
+<!-- 2 -->
+<section class="section alt">
+<div class="container zigzag">
+  <img src="../../assets/images/diseases/skin-problems/GettyImages-1409632345-148d0a7ffc0b4509837a3c3a707ae57d.jpg">
+  <div>
+    <h2>Psoriasis</h2>
+    <p>Psoriasis is a chronic (long-term) skin condition in which skin cells build up too quickly, leading to the formation of thick, red patches covered with silvery-white scales. It is not contagious, but it can be uncomfortable and sometimes painful.</p>
+    <a href="../vlog/psoriasis.html" class="more-btn">Get More Info</a>
+  </div>
+</div>
+</section>
+
+<!-- 3 -->
+<section class="section">
+<div class="container zigzag">
+  <div>
+    <h2>Eczema</h2>
+    <p>Eczema is a chronic inflammatory skin condition that causes the skin to become dry, itchy, red, and irritated. It often comes in flare-ups, where symptoms worsen for a period and then improve.</p>
+    <p>Eczema commonly affects the face, hands, elbows, knees, neck, and behind the ears, and it can occur in children as well as adults.</p>
+    <a href="../vlog/eczema.html" class="more-btn">Get More Info</a>
+  </div>
+  <img src="../../assets/images/diseases/skin-problems/Eczema-hands-2.png">
+</div>
+</section>
+
+<!-- 4 -->
+<section class="section alt">
+<div class="container zigzag">
+  <img src="../../assets/images/diseases/skin-problems/648x364_Ringworm_Body_Tinea_Corporis.png">
+  <div>
+    <h2>Fungal Infections</h2>
+    <p>Fungal infections are common skin conditions caused by the overgrowth of fungi on the skin. They usually develop in warm, moist areas of the body and can affect people of all ages. These infections are contagious and can spread through direct skin contact or shared items.</p>
+    <a href="../vlog/fungal-infections.html" class="more-btn">Get More Info</a>
+  </div>
+</div>
+</section>
+
+<!-- 5 -->
+<section class="section">
+<div class="container zigzag">
+  <div>
+    <h2>Pigmentation</h2>
+    <p>Pigmentation refers to the darkening or uneven coloring of the skin caused by excess production of melanin, the pigment responsible for skin color. It can appear as dark patches, spots, or uneven skin tone on different parts of the body.</p>
+    <a href="../vlog/pigmentation.html" class="more-btn">Get More Info</a>
+  </div>
+  <img src="../../assets/images/diseases/skin-problems/melasma.jpg">
+</div>
+</section>
+
+<!-- 6 : ADDED -->
+<section class="section alt">
+<div class="container zigzag">
+  <img src="../../assets/images/diseases/skin-problems/VWH-DermNet-AtopicDermatitisEczemaBIPOC-01-fa378724376f4585b19615f94342a5ab.jpg">
+  <div>
+    <h2>Chronic Skin Diseases</h2>
+    <p>
+      Chronic skin diseases are long-term skin conditions that tend to last for months or years and often show periodic flare-ups and remissions. These conditions may not have a permanent cure, but with proper care and management, symptoms can be controlled and reduced.
+    </p>
+    <a href="../vlog/chronic-skin-disease.html" class="more-btn">Get More Info</a>
+  </div>
+</div>
+</section>
+<!-- ===== FLOATING WHATSAPP BUTTON ===== -->
+<a href="javascript:void(0)"
+   class="whatsapp-float"
+   onclick="openWhatsApp()"
+   aria-label="Chat on WhatsApp">
+   <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
+        alt="WhatsApp Chat">
+</a>
+
+<style>
+/* ===== WHATSAPP FLOATING BUTTON ===== */
+.whatsapp-float{
+  position:fixed;
+  bottom:22px;
+  right:22px;
+  width:58px;
+  height:58px;
+  background:#25D366;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  box-shadow:0 12px 30px rgba(37,211,102,.45);
+  z-index:9999;
+  cursor:pointer;
+  transition:.3s;
+}
+.whatsapp-float img{
+  width:30px;
+  height:30px;
+}
+.whatsapp-float:hover{
+  transform:scale(1.08);
+  background:#1ebe5d;
+}
+
+/* Mobile safe spacing */
+@media(max-width:600px){
+  .whatsapp-float{
+    bottom:16px;
+    right:16px;
+  }
+}
+</style>
+
+<script>
+function openWhatsApp(){
+  const phone = "919870317940"; // ✅ correct format
+  const message = "Hello SEJ Ayurveda, I want consultation.";
+
+  const isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+  const url = isMobile
+    ? "https://wa.me/" + phone + "?text=" + encodeURIComponent(message)
+    : "https://web.whatsapp.com/send?phone=" + phone + "&text=" + encodeURIComponent(message);
+
+  window.open(url, "_blank");
+}
+</script>
+<!-- ===== END WHATSAPP BUTTON ===== -->
+
+<!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-flex">
+      <p>© 2015 SEJ Ayurveda. All rights reserved.</p> |      
+      <a href="../legal/privacy.html">Privacy Policy</a> |
+      <a href="../legal/terms.html">Terms</a> |
+      <a href="../legal/refund.html">Refund</a> |
+      <a href="../legal/about.html">About Us</a> |
+    </div>
+  </footer>
+</body>
+</html>

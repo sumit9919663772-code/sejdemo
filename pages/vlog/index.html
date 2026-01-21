@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ayurveda Insights | SEJ Ayurveda</title>
+
+<link rel="icon" href="../../favicon.png">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+
+body{
+  font-family:'Poppins',sans-serif;
+  background:#f8fafc;
+  color:#1f2937;
+  padding-top:80px;
+}
+.container{max-width:1200px;margin:auto;padding:0 20px}
+a{text-decoration:none;color:inherit}
+
+/* ===== HEADER (INDEX EXACT) ===== */
+.header{
+  position:fixed;
+  top:0;left:0;right:0;
+  height:80px;
+  background:rgba(255,255,255,.96);
+  backdrop-filter:blur(20px);
+  border-bottom:1px solid rgba(16,185,129,.2);
+  z-index:1000;
+}
+.navbar{
+  height:80px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+.nav-brand img{height:44px}
+
+.nav-menu{
+  display:flex;
+  list-style:none;
+  gap:2.8rem;
+}
+.nav-link{
+  font-size:15px;
+  font-weight:500;
+  color:#374151;
+  position:relative;
+}
+.nav-link::after{
+  content:'';
+  position:absolute;
+  left:50%;
+  bottom:-6px;
+  width:0;height:3px;
+  background:#10b981;
+  transform:translateX(-50%);
+  transition:.3s;
+}
+.nav-link:hover,
+.nav-link.active{color:#10b981}
+.nav-link:hover::after,
+.nav-link.active::after{width:100%}
+
+.nav-actions{
+  display:flex;
+  align-items:center;
+  gap:1.2rem;
+  min-width:260px;
+}
+.nav-actions span{
+  color:#059669;
+  font-weight:600;
+  font-size:14px;
+}
+.btn-outline{
+  border:2px solid #10b981;
+  padding:11px 22px;
+  border-radius:12px;
+  color:#10b981;
+  font-weight:500;
+}
+.btn-outline:hover{background:#10b981;color:#fff}
+
+.cart-btn{
+  position:relative;
+  width:44px;
+  height:44px;
+  border:2px solid #e5e7eb;
+  border-radius:12px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+.cart-btn img{width:18px}
+.cart-count{
+  position:absolute;
+  top:-6px;
+  right:-6px;
+  width:18px;
+  height:18px;
+  background:#ef4444;
+  color:#fff;
+  font-size:11px;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+/* ===== HERO ===== */
+.hero{
+  background:linear-gradient(135deg,#f0fdf4,#ecfeff);
+  padding:6rem 0 4rem;
+  text-align:center;
+}
+.hero h1{
+  font-size:clamp(2.4rem,5vw,3.6rem);
+  font-weight:700;
+  background:linear-gradient(135deg,#0f172a,#10b981);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+.hero p{
+  margin-top:1.2rem;
+  font-size:1.1rem;
+  color:#475569;
+  max-width:700px;
+  margin:auto;
+}
+
+/* ===== VLOG GRID ===== */
+.vlog-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:2rem;
+  padding:4rem 0;
+}
+.vlog-card{
+  background:#ffffff;
+  border-radius:18px;
+  padding:2rem;
+  box-shadow:0 10px 30px rgba(0,0,0,.08);
+  transition:.3s;
+}
+.vlog-card:hover{transform:translateY(-6px)}
+.vlog-card h3{
+  color:#10b981;
+  margin-bottom:.6rem;
+}
+.vlog-card p{
+  color:#64748b;
+  line-height:1.6;
+}
+.more-info{
+  margin-top:12px;
+  color:#10b981;
+  font-weight:500;
+}
+
+/* ===== FOOTER ===== */
+.footer{
+  background:#0f172a;
+  color:#cbd5f5;
+  padding:2.5rem 0;
+  text-align:center;
+}
+.footer span{color:#10b981}
+
+@media(max-width:900px){
+  .nav-menu{display:none}
+}
+</style>
+</head>
+
+<body>
+
+<header class="header">
+<nav class="navbar container">
+  <div class="nav-brand">
+    <a href="../../index.html">
+      <img src="../../assets/images/logo/sej-logo-dark.png">
+    </a>
+  </div>
+
+  <ul class="nav-menu">
+    <li><a href="../../index.html" class="nav-link">Home</a></li>
+    <li><a href="../diseases/" class="nav-link">Diseases</a></li>
+    <li><a href="../kits/" class="nav-link">Treatment Kits</a></li>
+    <li><a href="../consultation/" class="nav-link">Consultation</a></li>
+    <li><a href="../reviews/" class="nav-link">Reviews</a></li>
+    <li><a href="./index.html" class="nav-link active">Vlog</a></li>
+  </ul>
+
+  <div class="nav-actions">
+    <span>50000+ Patients</span>
+    <a href="../consultation/" class="btn-outline">Consult Now</a>
+    <a href="../checkout/" class="cart-btn">
+      <img src="../../assets/images/ui/c.png">
+      <span class="cart-count">0</span>
+    </a>
+  </div>
+</nav>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <h1>Ayurveda Insights</h1>
+    <p>Ayurvedic understanding of chronic skin and lifestyle disorders.</p>
+  </div>
+</section>
+
+<section>
+<div class="container vlog-grid">
+
+  <a href="./acne.html" class="vlog-card">
+    <h3>Acne & Pimples</h3>
+    <p>Recurring acne linked with digestion, hormones and lifestyle imbalance.</p>
+    <p class="more-info">Get More Info →</p>
+  </a>
+
+  <a href="./psoriasis.html" class="vlog-card">
+    <h3>Psoriasis</h3>
+    <p>Chronic skin condition involving scaling, dryness and inflammation.</p>
+    <p class="more-info">Get More Info →</p>
+  </a>
+
+  <a href="./eczema.html" class="vlog-card">
+    <h3>Eczema</h3>
+    <p>Itchy, irritated and sensitive skin often related to immune imbalance.</p>
+    <p class="more-info">Get More Info →</p>
+  </a>
+
+  <a href="./fungal-infections.html" class="vlog-card">
+    <h3>Fungal Infections</h3>
+    <p>Ringworm, itching and rashes linked with moisture and immunity issues.</p>
+    <p class="more-info">Get More Info →</p>
+  </a>
+
+  <a href="./pigmentation.html" class="vlog-card">
+    <h3>Pigmentation</h3>
+    <p>Dark patches and uneven tone due to blood and metabolic imbalance.</p>
+    <p class="more-info">Get More Info →</p>
+  </a>
+
+  <a href="./leucoderma.html" class="vlog-card">
+    <h3>Leucoderma (Vitiligo)</h3>
+    <p>Loss of skin pigmentation linked with autoimmune imbalance.</p>
+    <p class="more-info">Get More Info →</p>
+  </a>
+
+</div>
+</section>
+
+<!-- ===== FLOATING WHATSAPP BUTTON ===== -->
+<a href="javascript:void(0)"
+   class="whatsapp-float"
+   onclick="openWhatsApp()"
+   aria-label="Chat on WhatsApp">
+   <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
+        alt="WhatsApp Chat">
+</a>
+
+<style>
+/* ===== WHATSAPP FLOATING BUTTON ===== */
+.whatsapp-float{
+  position:fixed;
+  bottom:22px;
+  right:22px;
+  width:58px;
+  height:58px;
+  background:#25D366;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  box-shadow:0 12px 30px rgba(37,211,102,.45);
+  z-index:9999;
+  cursor:pointer;
+  transition:.3s;
+}
+.whatsapp-float img{
+  width:30px;
+  height:30px;
+}
+.whatsapp-float:hover{
+  transform:scale(1.08);
+  background:#1ebe5d;
+}
+
+/* Mobile safe spacing */
+@media(max-width:600px){
+  .whatsapp-float{
+    bottom:16px;
+    right:16px;
+  }
+}
+</style>
+
+<script>
+function openWhatsApp(){
+  const phone = "919870317940"; // ✅ correct format
+  const message = "Hello SEJ Ayurveda, I want consultation.";
+
+  const isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+  const url = isMobile
+    ? "https://wa.me/" + phone + "?text=" + encodeURIComponent(message)
+    : "https://web.whatsapp.com/send?phone=" + phone + "&text=" + encodeURIComponent(message);
+
+  window.open(url, "_blank");
+}
+</script>
+<!-- ===== END WHATSAPP BUTTON ===== -->
+
+<!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-flex">
+      <p>© 2015 SEJ Ayurveda. All rights reserved.</p> |      
+      <a href="../legal/privacy.html">Privacy Policy</a> |
+      <a href="../legal/terms.html">Terms</a> |
+      <a href="../legal/refund.html">Refund</a> |
+      <a href="../legal/about.html">About Us</a> |
+    </div>
+  </footer>
+
+</body>
+</html>

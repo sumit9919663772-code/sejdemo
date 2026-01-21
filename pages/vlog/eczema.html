@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Eczema – Ayurvedic Understanding | SEJ Ayurveda</title>
+<meta name="description"
+content="A complete Ayurvedic vlog-style guide on eczema. Understand causes, symptoms, lifestyle care, diet, do’s & don’ts and long-term balance with Ayurveda.">
+
+<link rel="icon" href="../../favicon.png">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{
+  font-family:'Poppins',sans-serif;
+  background:#f8fafc;
+  color:#1f2937;
+  overflow-x:hidden;
+  padding-top:80px;
+}
+.container{max-width:1200px;margin:auto;padding:0 20px}
+a{text-decoration:none}
+
+/* ===== HEADER (INDEX EXACT) ===== */
+.header{
+  position:fixed;
+  top:0;left:0;right:0;
+  height:80px;
+  background:rgba(255,255,255,.96);
+  backdrop-filter:blur(20px);
+  border-bottom:1px solid rgba(16,185,129,.2);
+  z-index:1000;
+}
+.navbar{
+  height:80px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+.nav-brand img{height:44px}
+
+.nav-menu{
+  display:flex;
+  list-style:none;
+  gap:2.8rem;
+}
+.nav-link{
+  font-size:15px;
+  font-weight:500;
+  color:#374151;
+  position:relative;
+}
+.nav-link::after{
+  content:'';
+  position:absolute;
+  left:50%;
+  bottom:-6px;
+  width:0;height:3px;
+  background:#10b981;
+  transform:translateX(-50%);
+  transition:.3s;
+}
+.nav-link:hover,
+.nav-link.active{color:#10b981}
+.nav-link:hover::after,
+.nav-link.active::after{width:100%}
+
+.nav-actions{
+  display:flex;
+  align-items:center;
+  gap:1.2rem;
+  min-width:260px;
+}
+.nav-actions span{
+  color:#059669;
+  font-weight:600;
+  font-size:14px;
+}
+.btn-outline{
+  border:2px solid #10b981;
+  padding:11px 22px;
+  border-radius:12px;
+  color:#10b981;
+  font-weight:500;
+}
+.btn-outline:hover{background:#10b981;color:#fff}
+
+.cart-btn{
+  position:relative;
+  width:44px;
+  height:44px;
+  border:2px solid #e5e7eb;
+  border-radius:12px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+.cart-btn img{width:18px}
+.cart-count{
+  position:absolute;
+  top:-6px;
+  right:-6px;
+  width:18px;
+  height:18px;
+  background:#ef4444;
+  color:#fff;
+  font-size:11px;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+/* HERO */
+.hero-section{
+  padding:6rem 0 4rem;
+  background:linear-gradient(135deg,#f0fdf4,#ecfeff);
+}
+.hero{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:4rem;
+  align-items:center;
+}
+.hero-title{
+  font-size:clamp(2.6rem,5vw,3.8rem);
+  font-weight:700;
+  background:linear-gradient(135deg,#0f172a,#10b981);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+.hero-subtitle{
+  margin-top:1.5rem;
+  color:#475569;
+  font-size:1.15rem;
+}
+.hero img{
+  width:100%;
+  max-width:420px;
+  border-radius:22px;
+  box-shadow:0 30px 60px rgba(0,0,0,.15);
+}
+
+/* ZIG ZAG */
+.section{padding:5.5rem 0;background:#fff}
+.section.alt{background:#f0fdf4}
+.zigzag{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:3.5rem;
+  align-items:center;
+}
+.zigzag h2{color:#10b981;margin-bottom:1rem}
+.zigzag p{color:#475569;line-height:1.8;margin-bottom:1rem}
+.zigzag ul{padding-left:18px}
+.zigzag li{margin-bottom:.6rem;color:#475569}
+.zigzag img{
+  width:100%;
+  border-radius:22px;
+  box-shadow:0 20px 40px rgba(0,0,0,.12);
+}
+
+/* FOOTER */
+.footer{
+  background:#0f172a;
+  color:#cbd5f5;
+  padding:3rem 0;
+  text-align:center;
+}
+.footer span{color:#10b981}
+
+@media(max-width:900px){
+  .hero,.zigzag{grid-template-columns:1fr;text-align:center}
+}
+</style>
+</head>
+
+<body>
+
+<header class="header">
+<nav class="navbar container">
+  <div class="nav-brand">
+    <a href="../../index.html">
+      <img src="../../assets/images/logo/sej-logo-dark.png">
+    </a>
+  </div>
+
+  <ul class="nav-menu">
+    <li><a href="../../index.html" class="nav-link">Home</a></li>
+    <li><a href="../diseases/" class="nav-link">Diseases</a></li>
+    <li><a href="../kits/" class="nav-link">Treatment Kits</a></li>
+    <li><a href="../consultation/" class="nav-link">Consultation</a></li>
+    <li><a href="../reviews/" class="nav-link">Reviews</a></li>
+    <li><a href="./index.html" class="nav-link active">Vlog</a></li>
+  </ul>
+
+  <div class="nav-actions">
+    <span>50000+ Patients</span>
+    <a href="../consultation/" class="btn-outline">Consult Now</a>
+    <a href="../checkout/" class="cart-btn">
+      <img src="../../assets/images/ui/c.png">
+      <span class="cart-count">0</span>
+    </a>
+  </div>
+</nav>
+</header>
+
+
+<!-- HERO -->
+<section class="hero-section">
+<div class="hero container">
+  <div>
+    <h1 class="hero-title">Eczema & Ayurvedic Understanding</h1>
+    <p class="hero-subtitle">
+       Eczema (Atopic Dermatitis) is a chronic skin condition marked by dryness,
+       itching, redness, and irritation. Symptoms often appear in flare-ups and
+       commonly affect the hands, elbows, knees, face, and neck.
+    </p>
+  </div>
+  <img src="../../assets/images/diseases/skin-problems/VWH-DermNet-AtopicDermatitisEczemaBIPOC-01-fa378724376f4585b19615f94342a5ab.jpg">
+</div>
+</section>
+
+<!-- WHAT IS -->
+<section class="section">
+<div class="container zigzag">
+  <div>
+<h2>What is Eczema?</h2>
+
+  <p>
+    <strong>Eczema</strong>, also known as <strong>Atopic Dermatitis</strong>, is a
+    chronic inflammatory skin condition that causes dryness, itching, redness,
+    and irritation of the skin. It often appears in flare-ups, where symptoms
+    worsen for a period and then improve.
+  </p>
+
+  <p>
+    Eczema can affect people of all ages, including children and adults.
+    Commonly affected areas include the hands, elbows, knees, face, neck,
+    and sometimes the scalp. In long-term cases, repeated scratching can make
+    the skin thick, rough, and sensitive.
+  </p>
+
+  <h3>Key Features of Eczema</h3>
+  <ul>
+    <li>Persistent itching, often worse at night</li>
+    <li>Dry, rough, or scaly skin</li>
+    <li>Red or inflamed patches</li>
+    <li>Cracked skin that may ooze or bleed</li>
+    <li>Recurring flare-ups and skin sensitivity</li>
+  </ul>
+
+  <p>
+    Eczema is not contagious, but it requires consistent care and proper
+    management to control symptoms and prevent frequent flare-ups.
+  </p>
+  </div>
+  <img src="../../assets/images/diseases/skin-problems/Eczema.jpg">
+</div>
+</section>
+
+<!-- CAUSES -->
+<section class="section alt">
+<div class="container zigzag">
+  <img src="../../assets/images/diseases/skin-problems/baby_skin_care_s6_dermatitis_eczema.png">
+  <div>
+<h2>Why Does Eczema Occur?</h2>
+
+  <p>
+    Eczema occurs due to a combination of internal and external factors that
+    weaken the skin’s natural barrier and trigger inflammation. This makes the
+    skin more sensitive to irritants, allergens, and environmental changes.
+  </p>
+
+  <ul>
+    <li>
+      <strong>Weak skin barrier:</strong>
+      Loss of moisture makes the skin dry and more prone to irritation.
+    </li>
+    <li>
+      <strong>Immune system imbalance:</strong>
+      An overactive immune response causes inflammation and itching.
+    </li>
+    <li>
+      <strong>Genetic factors:</strong>
+      A family history of eczema, allergies, or asthma increases the risk.
+    </li>
+    <li>
+      <strong>Allergens and irritants:</strong>
+      Dust, pollen, soaps, detergents, and chemicals can trigger flare-ups.
+    </li>
+    <li>
+      <strong>Environmental factors:</strong>
+      Cold weather, dry air, heat, and sweating may worsen symptoms.
+    </li>
+    <li>
+      <strong>Stress and lifestyle factors:</strong>
+      Emotional stress and unhealthy routines can aggravate eczema.
+    </li>
+  </ul>
+
+  <p>
+    Since multiple factors are involved, eczema often becomes a long-term
+    condition that requires consistent care and trigger management rather
+    than short-term relief.
+  </p>
+  </div>
+</div>
+</section>
+
+<!-- INSIDE BODY -->
+<section class="section">
+<div class="container zigzag">
+  <div>
+    <h2>What Happens Inside the Body?</h2>
+
+  <p>
+    In eczema, the body’s internal balance is disturbed, which affects the skin’s
+    natural defense system. The immune response becomes overactive and the skin
+    barrier weakens, making the skin dry, sensitive, and prone to inflammation.
+  </p>
+
+  <ul>
+    <li>
+      <strong>Weakened skin barrier:</strong>
+      The skin loses moisture easily, leading to dryness and cracking.
+    </li>
+    <li>
+      <strong>Overactive immune response:</strong>
+      The immune system reacts excessively, causing redness, swelling, and itching.
+    </li>
+    <li>
+      <strong>Inflammation inside the skin:</strong>
+      Continuous inflammation leads to irritation and flare-ups.
+    </li>
+    <li>
+      <strong>Increased nerve sensitivity:</strong>
+      Skin nerves become more reactive, resulting in persistent itching.
+    </li>
+    <li>
+      <strong>Internal triggers:</strong>
+      Stress, digestion issues, and hormonal imbalance can worsen symptoms.
+    </li>
+  </ul>
+
+  <p>
+    Because eczema involves internal processes and not just surface damage,
+    long-term care focuses on calming inflammation and restoring balance
+    from within.
+  </p>
+
+  </div>
+  <img src="../../assets/images/diseases/skin-problems/nc_derm-eczema-002.png">
+</div>
+</section>
+
+<!-- DO -->
+<section class="section alt">
+<div class="container zigzag">
+  <img src="../../assets/images/diseases/skin-problems/p0hrdb40.jpg">
+  <div>
+<h2>What To Do During Eczema </h2>
+
+  <p>
+    According to Ayurveda, eczema develops due to an imbalance of doshas,
+    mainly Pitta and Kapha, which affects skin health and immunity.
+    Management focuses on calming inflammation, soothing the skin,
+    and restoring internal balance.
+  </p>
+
+  <ul>
+    <li>
+      <strong>Keep the skin cool and calm:</strong>
+      Avoid excessive heat and irritation, as heat aggravates skin inflammation.
+    </li>
+    <li>
+      <strong>Maintain regular skin moisturization:</strong>
+      Gentle oil-based care helps reduce dryness and itching and supports
+      the skin barrier.
+    </li>
+    <li>
+      <strong>Wear loose, breathable clothing:</strong>
+      Soft cotton fabrics help reduce friction and prevent irritation.
+    </li>
+    <li>
+      <strong>Follow a balanced and light diet:</strong>
+      Easily digestible and cooling foods support digestion and skin balance.
+    </li>
+    <li>
+      <strong>Manage stress and emotions:</strong>
+      Mental stress can disturb dosha balance and worsen skin symptoms.
+    </li>
+    <li>
+      <strong>Maintain a disciplined daily routine:</strong>
+      Proper sleep, hydration, and routine habits support long-term healing.
+    </li>
+  </ul>
+
+  <p>
+    Ayurveda emphasizes consistent care and lifestyle balance to support
+    long-term comfort and reduce the recurrence of eczema symptoms.
+  </p>
+  </div>
+</div>
+</section>
+
+<!-- AVOID -->
+<section class="section">
+<div class="container zigzag">
+  <div>
+  <h2>What To Avoid During Eczema</h2>
+
+  <p>
+    According to Ayurveda, certain habits, foods, and lifestyle factors can
+    aggravate dosha imbalance and worsen eczema symptoms. Avoiding these
+    triggers helps calm inflammation and supports skin healing.
+  </p>
+
+  <ul>
+    <li>
+      <strong>Avoid scratching the skin:</strong>
+      Scratching increases irritation, damages the skin barrier, and delays healing.
+    </li>
+    <li>
+      <strong>Avoid excessive heat exposure:</strong>
+      Hot weather, steam, and hot water baths can aggravate itching and redness.
+    </li>
+    <li>
+      <strong>Avoid spicy, oily, and junk foods:</strong>
+      Such foods increase internal heat and may worsen skin inflammation.
+    </li>
+    <li>
+      <strong>Avoid harsh soaps and chemical products:</strong>
+      Strong cleansers disturb the skin’s natural balance and increase dryness.
+    </li>
+    <li>
+      <strong>Avoid tight and synthetic clothing:</strong>
+      These fabrics trap sweat and increase friction, leading to irritation.
+    </li>
+    <li>
+      <strong>Avoid irregular lifestyle habits:</strong>
+      Lack of sleep, poor routine, and dehydration can disturb dosha balance.
+    </li>
+    <li>
+      <strong>Avoid excessive stress:</strong>
+      Mental stress can trigger flare-ups and slow down recovery.
+    </li>
+  </ul>
+
+  <p>
+    Ayurveda emphasizes prevention through mindful choices.
+    Avoiding these factors helps reduce flare-ups and supports
+    long-term skin comfort.
+  </p>
+  </div>
+  <img src="../../assets/images/diseases/skin-problems/[Compressed]+PPT+Top+Allergens.png">
+</div>
+</section>
+
+<!-- AYURVEDA -->
+<section class="section alt">
+<div class="container zigzag">
+  <img src="../../assets/images/diseases/skin-problems/1-s2.0-S2667031322000422-gr3.jpg">
+  <div>
+  <h2>How Ayurveda Helps</h2>
+
+  <p>
+    Ayurveda treats eczema by addressing the root cause rather than only suppressing
+    external symptoms. According to Ayurveda, eczema develops due to an imbalance of
+    Pitta and Kapha dosha, accumulation of toxins (Ama), and weak digestive fire (Agni).
+  </p>
+
+  <div class="helps-points">
+    <h3>Balancing Doshas</h3>
+    <p>
+      Ayurvedic treatment focuses on calming excess Pitta (heat and inflammation)
+      and Kapha (itching and discharge) to restore skin balance.
+    </p>
+
+    <h3>Internal Detoxification</h3>
+    <p>
+      Detoxification therapies help eliminate toxins from the blood and tissues,
+      reducing chronic inflammation and recurring flare-ups.
+    </p>
+
+    <h3>Blood Purification</h3>
+    <p>
+      Ayurveda supports natural blood purification to improve skin clarity,
+      reduce redness, and prevent repeated outbreaks.
+    </p>
+
+    <h3>Improving Digestion</h3>
+    <p>
+      Strengthening digestion prevents toxin formation, which plays a key role
+      in long-term skin healing.
+    </p>
+
+    <h3>Herbal Support</h3>
+    <p>
+      Ayurvedic herbs help soothe itching, dryness, scaling, and irritation
+      without harmful side effects.
+    </p>
+
+    <h3>Lifestyle & Diet Correction</h3>
+    <p>
+      Ayurveda emphasizes daily routine, stress control, and diet correction
+      to maintain healthy skin and prevent relapse.
+    </p>
+  </div>
+  </div>
+</div>
+</section>
+<!-- ===== FLOATING WHATSAPP BUTTON ===== -->
+<a href="javascript:void(0)"
+   class="whatsapp-float"
+   onclick="openWhatsApp()"
+   aria-label="Chat on WhatsApp">
+   <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
+        alt="WhatsApp Chat">
+</a>
+
+<style>
+/* ===== WHATSAPP FLOATING BUTTON ===== */
+.whatsapp-float{
+  position:fixed;
+  bottom:22px;
+  right:22px;
+  width:58px;
+  height:58px;
+  background:#25D366;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  box-shadow:0 12px 30px rgba(37,211,102,.45);
+  z-index:9999;
+  cursor:pointer;
+  transition:.3s;
+}
+.whatsapp-float img{
+  width:30px;
+  height:30px;
+}
+.whatsapp-float:hover{
+  transform:scale(1.08);
+  background:#1ebe5d;
+}
+
+/* Mobile safe spacing */
+@media(max-width:600px){
+  .whatsapp-float{
+    bottom:16px;
+    right:16px;
+  }
+}
+</style>
+
+<script>
+function openWhatsApp(){
+  const phone = "919870317940"; // ✅ correct format
+  const message = "Hello SEJ Ayurveda, I want consultation.";
+
+  const isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+  const url = isMobile
+    ? "https://wa.me/" + phone + "?text=" + encodeURIComponent(message)
+    : "https://web.whatsapp.com/send?phone=" + phone + "&text=" + encodeURIComponent(message);
+
+  window.open(url, "_blank");
+}
+</script>
+<!-- ===== END WHATSAPP BUTTON ===== -->
+
+<!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-flex">
+      <p>© 2015 SEJ Ayurveda. All rights reserved.</p> |      
+      <a href="../legal/privacy.html">Privacy Policy</a> |
+      <a href="../legal/terms.html">Terms</a> |
+      <a href="../legal/refund.html">Refund</a> |
+      <a href="../legal/about.html">About Us</a> |
+    </div>
+  </footer>
+</body>
+</html>

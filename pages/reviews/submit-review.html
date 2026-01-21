@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Submit Your Review | SEJ Ayurveda</title>
+
+<meta name="description"
+content="Share your genuine experience with SEJ Ayurveda consultation or treatment kits.">
+
+<link rel="icon" href="../../favicon.png">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+
+<style>
+
+/* ================= RESET ================= */
+*{margin:0;padding:0;box-sizing:border-box}
+body{
+  font-family:'Poppins',sans-serif;
+  background:#f8fafc;
+  color:#1f2937;
+  overflow-x:hidden;
+  padding-top:80px; /* INDEX HEADER HEIGHT */
+}
+.container{max-width:1200px;margin:auto;padding:0 20px}
+a{text-decoration:none}
+
+/* ================= HEADER (INDEX MASTER – UNCHANGED) ================= */
+.header{
+  position:fixed;
+  top:0;left:0;right:0;
+  background:rgba(255,255,255,.96);
+  backdrop-filter:blur(20px);
+  border-bottom:1px solid rgba(16,185,129,.2);
+  z-index:1000;
+}
+.navbar{
+  height:80px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+.nav-brand img{height:44px}
+
+.nav-menu{
+  display:flex;
+  list-style:none;
+  gap:2.8rem;
+  white-space:nowrap;
+}
+.nav-link{
+  font-size:15px;
+  font-weight:500;
+  color:#374151;
+  position:relative;
+}
+.nav-link::after{
+  content:'';
+  position:absolute;
+  left:50%;
+  bottom:-6px;
+  width:0;
+  height:3px;
+  background:linear-gradient(90deg,#10b981,#059669);
+  transform:translateX(-50%);
+  transition:.3s;
+}
+.nav-link:hover,
+.nav-link.active{color:#10b981}
+.nav-link:hover::after,
+.nav-link.active::after{width:100%}
+
+.nav-actions{
+  display:flex;
+  align-items:center;
+  gap:1.2rem;
+}
+.btn-outline{
+  padding:11px 22px;
+  border-radius:12px;
+  font-size:14px;
+  font-weight:500;
+  border:2px solid #10b981;
+  color:#10b981;
+}
+.btn-outline:hover{
+  background:#10b981;
+  color:#fff;
+}
+.cart-btn{
+  position:relative;
+  border:2px solid #e5e7eb;
+  border-radius:12px;
+  padding:10px;
+}
+.cart-count{
+  position:absolute;
+  top:-6px;
+  right:-6px;
+  width:18px;
+  height:18px;
+  background:#ef4444;
+  color:#fff;
+  font-size:11px;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+/* ================= HERO ================= */
+.hero{
+  padding:4.5rem 0 3.5rem;
+  background:linear-gradient(135deg,#f0fdf4,#ecfeff);
+  text-align:center;
+}
+.hero h1{
+  font-size:clamp(2.4rem,5vw,3.4rem);
+  font-weight:700;
+  background:linear-gradient(135deg,#0f172a,#10b981);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+.hero p{
+  margin-top:1rem;
+  color:#475569;
+  max-width:720px;
+  margin-inline:auto;
+}
+
+/* ================= FORM ================= */
+.section{padding:5rem 0;background:#fff}
+.form-card{
+  max-width:700px;
+  margin:auto;
+  background:#ffffff;
+  border-radius:22px;
+  padding:2.8rem;
+  box-shadow:0 25px 50px rgba(0,0,0,.08);
+}
+.form-card h2{
+  color:#10b981;
+  margin-bottom:.6rem;
+}
+.form-subtitle{
+  color:#475569;
+  margin-bottom:1.8rem;
+}
+
+.form-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:1.2rem;
+}
+.form-grid input,
+.form-grid textarea{
+  width:100%;
+  padding:14px 16px;
+  border-radius:14px;
+  border:1px solid #e5e7eb;
+  font-family:'Poppins',sans-serif;
+  font-size:14px;
+}
+.form-grid textarea{
+  grid-column:1/-1;
+  resize:none;
+}
+.form-grid input:focus,
+.form-grid textarea:focus{
+  outline:none;
+  border-color:#10b981;
+}
+
+.submit-btn{
+  margin-top:1.8rem;
+  width:100%;
+  padding:16px;
+  border-radius:16px;
+  border:none;
+  background:linear-gradient(135deg,#10b981,#059669);
+  color:#fff;
+  font-size:16px;
+  font-weight:600;
+  cursor:pointer;
+}
+.submit-btn:hover{opacity:.92}
+
+.disclaimer{
+  margin-top:1.6rem;
+  font-size:13px;
+  color:#64748b;
+  text-align:center;
+}
+
+/* ================= FOOTER ================= */
+.footer{
+  background:#0f172a;
+  color:#cbd5f5;
+  padding:3rem 0;
+  text-align:center;
+}
+.footer span{color:#10b981}
+.footer a{color:#cbd5f5;margin:0 8px;font-size:14px}
+.footer a:hover{color:#10b981}
+
+@media(max-width:900px){
+  .form-grid{grid-template-columns:1fr}
+  .nav-menu{display:none}
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- ================= HEADER (INDEX EXACT) ================= -->
+<header class="header">
+<nav class="navbar container">
+  <div class="nav-brand">
+    <img src="../../assets/images/logo/sej-logo-dark.png">
+  </div>
+
+  <ul class="nav-menu">
+    <li><a href="../../index.html" class="nav-link">Home</a></li>
+    <li><a href="../diseases/" class="nav-link">Diseases</a></li>
+    <li><a href="../kits/" class="nav-link">Treatment Kits</a></li>
+    <li><a href="../consultation/" class="nav-link">Consultation</a></li>
+    <li><a href="./index.html" class="nav-link active">Reviews</a></li>
+    <li><a href="../vlog/" class="nav-link">Vlog</a></li>
+  </ul>
+
+  <div class="nav-actions">
+    <span style="color:#059669;font-weight:600;font-size:14px">
+      5000+ Patients
+    </span>
+    <a href="../consultation/" class="btn-outline">Consult Now</a>
+    <a href="../checkout/" class="cart-btn">
+      <img src="../../assets/images/ui/c.png" width="18">
+      <span class="cart-count">0</span>
+    </a>
+  </div>
+</nav>
+</header>
+
+<!-- ================= HERO ================= -->
+<section class="hero">
+  <div class="container">
+    <h1>Share Your Experience</h1>
+    <p>
+      Your genuine feedback helps others understand our Ayurvedic
+      consultation and treatment approach.
+    </p>
+  </div>
+</section>
+
+<!-- ================= FORM ================= -->
+<section class="section">
+<div class="container">
+
+<div class="form-card">
+  <h2>Submit Patient Review</h2>
+  <p class="form-subtitle">
+    Please share your honest experience. Avoid exaggerated or medical claims.
+  </p>
+
+  <form>
+    <div class="form-grid">
+      <input type="text" placeholder="Your Name" required>
+      <input type="tel" placeholder="Mobile Number (for verification)" required>
+      <textarea rows="5" placeholder="Write your experience in your own words" required></textarea>
+    </div>
+
+    <button class="submit-btn">Submit Review</button>
+  </form>
+
+  <div class="disclaimer">
+    Reviews are moderated before publishing.  
+    Personal contact details are never displayed publicly.
+  </div>
+</div>
+
+</div>
+</section>
+
+<footer class="footer">
+  <div class="container footer-flex">
+    <p>© 2015 SEJ Ayurveda. All rights reserved.</p> |      
+    <a href="../legal/privacy.html">Privacy Policy</a> |
+    <a href="../legal/terms.html">Terms</a> |
+    <a href="../legal/refund.html">Refund</a> |
+    <a href="../legal/about.html">About Us</a> |
+  </div>
+</footer>
+
+  <!-- ===== FLOATING WHATSAPP BUTTON ===== -->
+<a href="javascript:void(0)"
+   class="whatsapp-float"
+   onclick="openWhatsApp()"
+   aria-label="Chat on WhatsApp">
+   <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
+        alt="WhatsApp Chat">
+</a>
+
+<style>
+/* ===== WHATSAPP FLOATING BUTTON ===== */
+.whatsapp-float{
+  position:fixed;
+  bottom:22px;
+  right:22px;
+  width:58px;
+  height:58px;
+  background:#25D366;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  box-shadow:0 12px 30px rgba(37,211,102,.45);
+  z-index:9999;
+  cursor:pointer;
+  transition:.3s;
+}
+.whatsapp-float img{
+  width:30px;
+  height:30px;
+}
+.whatsapp-float:hover{
+  transform:scale(1.08);
+  background:#1ebe5d;
+}
+
+/* Mobile safe spacing */
+@media(max-width:600px){
+  .whatsapp-float{
+    bottom:16px;
+    right:16px;
+  }
+}
+</style>
+
+<script>
+function openWhatsApp(){
+  const phone = "919870317940"; // ✅ correct format
+  const message = "Hello SEJ Ayurveda, I want consultation.";
+
+  const isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+  const url = isMobile
+    ? "https://wa.me/" + phone + "?text=" + encodeURIComponent(message)
+    : "https://web.whatsapp.com/send?phone=" + phone + "&text=" + encodeURIComponent(message);
+
+  window.open(url, "_blank");
+}
+</script>
+<!-- ===== END WHATSAPP BUTTON ===== -->
+
+</body>
+</html>

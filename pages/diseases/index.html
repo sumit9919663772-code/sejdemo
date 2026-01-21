@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Diseases We Treat | SEJ Ayurveda</title>
+<meta name="description"
+content="Ayurvedic treatment for Skin Problems and Skin Leucoderma (Vitiligo). Trusted Ayurvedic care by SEJ Ayurveda.">
+
+<link rel="icon" href="../../favicon.png">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+
+<style>
+
+/* ================= RESET ================= */
+*{margin:0;padding:0;box-sizing:border-box}
+
+/* ================= BODY (FIX FOR SHAKE) ================= */
+body{
+  font-family:'Poppins',sans-serif;
+  background:#f8fafc;
+  color:#1f2937;
+  padding-top:80px; /* HEADER HEIGHT — MUST */
+}
+
+.container{
+  max-width:1200px;
+  margin:auto;
+  padding:0 20px;
+}
+a{text-decoration:none}
+
+/* ================= HEADER (INDEX EXACT) ================= */
+.header{
+  position:fixed;
+  top:0;
+  left:0;
+  right:0;
+  height:80px;
+  background:rgba(255,255,255,.96);
+  backdrop-filter:blur(20px);
+  border-bottom:1px solid rgba(16,185,129,.2);
+  z-index:1000;
+}
+.navbar{
+  height:80px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+.nav-brand img{height:44px}
+
+/* MENU */
+.nav-menu{
+  display:flex;
+  list-style:none;
+  gap:2.8rem;
+}
+.nav-link{
+  font-size:15px;
+  font-weight:500;
+  color:#374151;
+  position:relative;
+}
+.nav-link::after{
+  content:'';
+  position:absolute;
+  left:50%;
+  bottom:-6px;
+  width:0;
+  height:3px;
+  background:linear-gradient(90deg,#10b981,#059669);
+  transform:translateX(-50%);
+  transition:.3s;
+  border-radius:2px;
+}
+.nav-link:hover,
+.nav-link.active{color:#10b981}
+.nav-link:hover::after,
+.nav-link.active::after{width:100%}
+
+/* ACTIONS */
+.nav-actions{
+  display:flex;
+  align-items:center;
+  gap:1.2rem;
+}
+.nav-patient-count{
+  color:#059669;
+  font-weight:600;
+  font-size:14px;
+}
+.btn{
+  padding:11px 22px;
+  border-radius:12px;
+  font-size:14px;
+  font-weight:500;
+}
+.btn-outline{
+  border:2px solid #10b981;
+  color:#10b981;
+}
+.btn-outline:hover{
+  background:#10b981;
+  color:#fff;
+}
+.cart-btn{
+  position:relative;
+  border:2px solid #e5e7eb;
+  border-radius:12px;
+  padding:10px;
+}
+.cart-count{
+  position:absolute;
+  top:-6px;
+  right:-6px;
+  width:18px;
+  height:18px;
+  background:#ef4444;
+  color:#fff;
+  font-size:11px;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+/* ================= HERO (NO DOUBLE OFFSET) ================= */
+.page-hero{
+  padding:80px 0;
+  background:linear-gradient(135deg,#f0fdf4,#ecfeff);
+  text-align:center;
+}
+.page-title{
+  font-size:clamp(2.4rem,5vw,3.6rem);
+  font-weight:700;
+  background:linear-gradient(135deg,#0f172a,#10b981);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+.page-subtitle{
+  margin-top:1.2rem;
+  font-size:1.15rem;
+  color:#475569;
+  max-width:720px;
+  margin:auto;
+}
+
+/* ================= DISEASE CARDS ================= */
+.disease-section{
+  padding:5rem 0;
+  background:#ffffff;
+}
+.disease-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:2.5rem;
+}
+.disease-card{
+  background:#f8fafc;
+  border:1px solid #e5e7eb;
+  border-radius:22px;
+  padding:2.5rem;
+  transition:.3s;
+}
+.disease-card:hover{
+  transform:translateY(-8px);
+  box-shadow:0 20px 40px rgba(0,0,0,.08);
+}
+.disease-card h3{
+  color:#10b981;
+  font-size:1.4rem;
+  margin-bottom:.8rem;
+}
+.disease-card p{
+  color:#64748b;
+  line-height:1.6;
+}
+.disease-card a{
+  display:inline-block;
+  margin-top:1rem;
+  font-weight:500;
+  color:#10b981;
+}
+
+/* ================= CTA ================= */
+.cta{
+  background:#0f172a;
+  color:#fff;
+  padding:4rem 0;
+  text-align:center;
+}
+.cta a{
+  display:inline-block;
+  margin-top:1.2rem;
+  background:#10b981;
+  color:#fff;
+  padding:14px 28px;
+  border-radius:12px;
+}
+
+/* ================= FOOTER ================= */
+.footer{
+  background:#0f172a;
+  color:#cbd5f5;
+  padding:2.5rem 0;
+  text-align:center;
+}
+.footer span{color:#10b981}
+
+</style>
+</head>
+
+<body>
+
+<!-- ================= HEADER ================= -->
+<header class="header">
+<nav class="navbar container">
+
+  <div class="nav-brand">
+    <a href="../../index.html">
+      <img src="../../assets/images/logo/sej-logo-dark.png" alt="SEJ Ayurveda">
+    </a>
+  </div>
+
+  <ul class="nav-menu">
+    <li><a href="../../index.html" class="nav-link">Home</a></li>
+    <li><a href="./index.html" class="nav-link active">Diseases</a></li>
+    <li><a href="../kits/" class="nav-link">Treatment Kits</a></li>
+    <li><a href="../consultation/" class="nav-link">Consultation</a></li>
+    <li><a href="../reviews/" class="nav-link">Reviews</a></li>
+    <li><a href="../vlog/" class="nav-link">Vlog</a></li>
+  </ul>
+
+  <div class="nav-actions">
+    <span class="nav-patient-count">50000+ Patients</span>
+    <a href="../consultation/" class="btn btn-outline">Consult Now</a>
+    <a href="../checkout/" class="cart-btn">
+      <img src="../../assets/images/ui/c.png" width="20">
+      <span class="cart-count">0</span>
+    </a>
+  </div>
+
+</nav>
+</header>
+
+<!-- ================= HERO ================= -->
+<section class="page-hero">
+<div class="container">
+  <h1 class="page-title">Diseases We Treat</h1>
+  <p class="page-subtitle">
+    Chronic skin conditions treated with authentic Ayurvedic
+    protocols focused on root-cause healing.
+  </p>
+</div>
+</section>
+
+<!-- ================= DISEASES ================= -->
+<section class="disease-section">
+<div class="container">
+<div class="disease-grid">
+
+  <div class="disease-card">
+    <h3>Skin Problems</h3>
+    <p>
+      Treatment for psoriasis, eczema, acne, fungal infections
+      and long-term skin disorders through detoxification and
+      immunity balancing.
+    </p>
+    <a href="./skin-problems.html">Know More →</a>
+  </div>
+
+  <div class="disease-card">
+    <h3>Skin Leucoderma (Vitiligo)</h3>
+    <p>
+      Specialised Ayurvedic approach for leucoderma focused on
+      digestion correction, immune balance and pigmentation recovery.
+    </p>
+    <a href="./leucoderma.html">Know More →</a>
+  </div>
+
+</div>
+</div>
+</section>
+
+<!-- ================= CTA ================= -->
+<section class="cta">
+<div class="container">
+  <h2>Need Personalised Guidance?</h2>
+  <p>Consult our Ayurvedic expert before starting treatment</p>
+  <a href="../consultation/">Book Consultation</a>
+</div>
+</section>
+<!-- ===== FLOATING WHATSAPP BUTTON ===== -->
+<a href="javascript:void(0)"
+   class="whatsapp-float"
+   onclick="openWhatsApp()"
+   aria-label="Chat on WhatsApp">
+   <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
+        alt="WhatsApp Chat">
+</a>
+
+<style>
+/* ===== WHATSAPP FLOATING BUTTON ===== */
+.whatsapp-float{
+  position:fixed;
+  bottom:22px;
+  right:22px;
+  width:58px;
+  height:58px;
+  background:#25D366;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  box-shadow:0 12px 30px rgba(37,211,102,.45);
+  z-index:9999;
+  cursor:pointer;
+  transition:.3s;
+}
+.whatsapp-float img{
+  width:30px;
+  height:30px;
+}
+.whatsapp-float:hover{
+  transform:scale(1.08);
+  background:#1ebe5d;
+}
+
+/* Mobile safe spacing */
+@media(max-width:600px){
+  .whatsapp-float{
+    bottom:16px;
+    right:16px;
+  }
+}
+</style>
+
+<script>
+function openWhatsApp(){
+  const phone = "919870317940"; // ✅ correct format
+  const message = "Hello SEJ Ayurveda, I want consultation.";
+
+  const isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+  const url = isMobile
+    ? "https://wa.me/" + phone + "?text=" + encodeURIComponent(message)
+    : "https://web.whatsapp.com/send?phone=" + phone + "&text=" + encodeURIComponent(message);
+
+  window.open(url, "_blank");
+}
+</script>
+<!-- ===== END WHATSAPP BUTTON ===== -->
+
+<!-- ================= FOOTER ================= -->
+  <footer class="footer">
+    <div class="container footer-flex">
+      <p>© 2015 SEJ Ayurveda. All rights reserved.</p> |      
+      <a href="../legal/privacy.html">Privacy Policy</a> |
+      <a href="../legal/terms.html">Terms</a> |
+      <a href="../legal/refund.html">Refund</a> |
+    </div>
+  </footer>
+</body>
+</html>

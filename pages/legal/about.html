@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>About Us | SEJ Ayurveda</title>
+
+<meta name="description"
+content="SEJ Ayurveda journey since 2015, CEO Sumit vlog, Ayurvedic clinic philosophy and contact information.">
+
+<link rel="icon" href="../../favicon.png">
+
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+
+<style>
+/* ================= HEADER ================= */
+.header{
+    position:fixed;
+    top:0;left:0;right:0;
+    background:rgba(255,255,255,.96);
+    backdrop-filter:blur(20px);
+    border-bottom:1px solid rgba(16,185,129,.2);
+    z-index:1000;
+    transition:.3s;
+}
+.navbar{
+    height:80px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+.nav-brand img{height:44px}
+
+/* ================= MENU ================= */
+.nav-menu{
+    display:flex;
+    list-style:none;
+    gap:2.8rem;
+    white-space:nowrap;
+}
+.nav-link{
+    font-size:15px;
+    font-weight:500;
+    color:#374151;
+    position:relative;
+}
+.nav-link::after{
+    content:'';
+    position:absolute;
+    left:50%;
+    bottom:-6px;
+    width:0;
+    height:3px;
+    background:linear-gradient(90deg,#10b981,#059669);
+    transform:translateX(-50%);
+    transition:.3s;
+    border-radius:2px;
+}
+.nav-link:hover,
+.nav-link.active{
+    color:#10b981;
+}
+.nav-link:hover::after,
+.nav-link.active::after{
+    width:100%;
+}
+
+/* ================= ACTIONS ================= */
+.nav-actions{
+    display:flex;
+    align-items:center;
+    gap:1.2rem;
+}
+.btn{
+    padding:11px 22px;
+    border-radius:12px;
+    font-size:14px;
+    font-weight:500;
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+}
+.btn-primary{
+    background:linear-gradient(135deg,#10b981,#059669);
+    color:#fff;
+}
+.btn-outline{
+    border:2px solid #10b981;
+    color:#10b981;
+}
+.btn-outline:hover{
+    background:#10b981;
+    color:#fff;
+}
+.cart-btn{
+    position:relative;
+    border:2px solid #e5e7eb;
+    border-radius:12px;
+    padding:10px;
+}
+.cart-count{
+    position:absolute;
+    top:-6px;
+    right:-6px;
+    width:18px;
+    height:18px;
+    background:#ef4444;
+    color:#fff;
+    font-size:11px;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+
+/* ================= BASE ================= */
+body{
+  font-family:'Poppins',sans-serif;
+  background:#f8fafc;
+  color:#1f2937;
+  margin:0;
+}
+.container{
+  max-width:1200px;
+  margin:auto;
+  padding:0 20px;
+}
+a{text-decoration:none}
+
+/* ================= HERO ================= */
+.about-hero{
+  padding:150px 0 100px;
+  background:linear-gradient(135deg,#f0fdf4,#ecfeff);
+}
+.about-hero h1{
+  font-family:'Playfair Display',serif;
+  font-size:3.2rem;
+}
+.about-hero p{
+  max-width:900px;
+  font-size:1.1rem;
+  color:#475569;
+  margin-top:1.2rem;
+}
+.hero-badge{
+  margin-top:2rem;
+  display:inline-block;
+  padding:10px 20px;
+  background:#10b981;
+  color:#fff;
+  border-radius:30px;
+  font-size:14px;
+}
+
+/* ================= SECTIONS ================= */
+.section{
+  padding:5.5rem 0;
+}
+.section h2{
+  font-family:'Playfair Display',serif;
+  font-size:2.6rem;
+  margin-bottom:1.8rem;
+}
+.section p{
+  max-width:1000px;
+  line-height:1.9;
+  color:#475569;
+  margin-bottom:1.4rem;
+}
+
+/* ================= VLOG BLOCK ================= */
+.vlog-block{
+  margin-bottom:3.5rem;
+}
+.vlog-block h3{
+  font-size:1.5rem;
+  color:#10b981;
+  margin-bottom:1rem;
+}
+.vlog-block p{
+  font-size:1.05rem;
+}
+
+/* ================= CLINIC ================= */
+.clinic{
+  background:#f0fdf4;
+}
+
+/* ================= CONTACT ================= */
+.contact-box{
+  background:#fff;
+  padding:3rem;
+  border-radius:26px;
+  box-shadow:0 20px 40px rgba(0,0,0,.08);
+  max-width:800px;
+}
+.contact-box input,
+.contact-box textarea{
+  width:100%;
+  padding:14px;
+  margin-bottom:1rem;
+  border-radius:12px;
+  border:1px solid #e5e7eb;
+  font-family:'Poppins',sans-serif;
+}
+.contact-box textarea{
+  resize:none;
+  height:140px;
+}
+.contact-box button{
+  background:linear-gradient(135deg,#10b981,#059669);
+  color:#fff;
+  border:none;
+  padding:14px 30px;
+  border-radius:14px;
+  font-size:15px;
+  cursor:pointer;
+}
+
+/* ================= FOOTER ================= */
+.footer{
+  background:#0f172a;
+  color:#cbd5f5;
+  padding:3rem 0;
+  text-align:center;
+}
+.footer a{
+  color:#cbd5f5;
+  margin:0 8px;
+  font-size:14px;
+}
+.footer a:hover{color:#10b981}
+
+@media(max-width:900px){
+  .about-hero h1{font-size:2.4rem}
+}
+</style>
+</head>
+
+<body>
+
+<!-- ===== HEADER ===== -->
+ <header class="header">
+<nav class="navbar container">
+    <div class="nav-brand">
+         <img src="../../assets/images/logo/sej-logo-dark.png" alt="SEJ Ayurveda">
+    </div>
+  <ul class="nav-menu">
+    <li><a href="../../index.html" class="nav-link">Home</a></li>
+    <li><a href="../diseases/" class="nav-link">Diseases</a></li>
+    <li><a href="../kits/" class="nav-link">Treatment Kits</a></li>
+    <li><a href="../consultation/" class="nav-link">Consultation</a></li>
+    <li><a href="../reviews/" class="nav-link">Reviews</a></li>
+    <li><a href="../vlog/" class="nav-link">Vlog</a></li>
+  </ul>
+
+    <div class="nav-actions">
+        <span style="color:#059669;font-weight:600;font-size:14px">
+            50000+ Patients
+        </span>
+              <a href="../consultation/" class="btn btn-outline">
+
+            Consult Now
+        </a>
+       <a href="../checkout/" class="cart-btn">
+      <img src="../../assets/images/ui/c.png" width="18" alt="">
+      <span class="cart-count">0</span>
+    </a>
+    </div>
+</nav>
+</header>
+
+<!-- 🔴 Paste EXACT SAME HEADER from index.html here -->
+
+<!-- ================= HERO ================= -->
+<section class="about-hero">
+  <div class="container">
+    <h1>About SEJ Ayurveda</h1>
+    <p>
+      SEJ Ayurveda is a dedicated Ayurvedic clinic and wellness platform focused on
+      treating chronic skin disorders through authentic, root-cause-based healing.
+      Our journey began in 2015 with a simple belief — healing must be natural, ethical,
+      and long-term.
+    </p>
+    <span class="hero-badge">Trusted Since 2015</span>
+  </div>
+</section>
+
+<!-- ================= CEO VLOG ================= -->
+<section class="section">
+  <div class="container">
+
+    <div class="vlog-block">
+  <h3>The Beginning of SEJ Ayurveda (2015)</h3>
+  <p>
+    In 2015, SEJ Ayurveda was not planned as a large clinic or a brand. It started
+    as a simple thought that kept disturbing me every day. I was seeing patients
+    suffering from chronic skin diseases who had already tried everything but were
+    still confused, tired, and mentally broken.
+  </p>
+</div>
+
+<div class="vlog-block">
+  <p>
+    Many of them were told that their condition had no solution. Some were advised
+    to live with it. Others were dependent on temporary relief methods that worked
+    only for a short time and then failed again.
+  </p>
+</div>
+
+<div class="vlog-block">
+  <p>
+    As an Ayurveda practitioner, I knew one thing clearly — if the root cause is
+    identified correctly, the body has the capacity to heal. The problem was not
+    the disease. The problem was the approach.
+  </p>
+</div>
+
+<div class="vlog-block">
+  <h3>Why Ayurveda, Not Shortcuts</h3>
+  <p>
+    Ayurveda never promises instant miracles. It promises understanding. It teaches
+    us to observe digestion, immunity, mental stress, sleep patterns, and daily habits.
+    Skin diseases are never isolated problems. They are reflections of internal imbalance.
+  </p>
+</div>
+
+<div class="vlog-block">
+  <p>
+    When SEJ Ayurveda started, the focus was very clear — no shortcuts, no false
+    commitments, and no cosmetic masking. Healing had to be natural, slow, and stable.
+  </p>
+</div>
+
+<div class="vlog-block">
+  <h3>Early Days of the Clinic</h3>
+  <p>
+    In the early days, the clinic was small. Facilities were limited, but time was not.
+    Every patient was given enough time to explain their journey, their frustration,
+    and their expectations.
+  </p>
+</div>
+
+<div class="vlog-block">
+  <p>
+    I personally used to explain to patients that healing is a process. It requires
+    discipline, patience, and consistency. Some patients stayed. Some left. But those
+    who stayed taught us the real value of trust.
+  </p>
+</div>
+
+<div class="vlog-block">
+  <h3>Understanding Skin Disorders Deeply</h3>
+  <p>
+    Conditions like psoriasis, vitiligo, eczema, acne, and chronic fungal infections
+    are not just skin-deep. They are deeply connected to liver function, digestion,
+    blood purity, and mental stress.
+  </p>
+</div>
+
+<div class="vlog-block">
+  <p>
+    Ayurveda looks at these conditions through dosha imbalance. Pitta, Kapha, and Vata
+    play a major role. Without balancing these, no medicine can give long-term relief.
+  </p>
+</div>
+
+<div class="vlog-block">
+  <h3>Daily Life Inside SEJ Ayurveda Clinic</h3>
+  <p>
+    A typical day at SEJ Ayurveda starts with consultations, not prescriptions.
+    We ask questions. We listen. We observe patterns. We study lifestyle before
+    suggesting any treatment plan.
+  </p>
+</div>
+
+<div class="vlog-block">
+  <p>
+    Patients are educated about what is happening inside their body. This awareness
+    itself becomes a part of healing. When patients understand their condition,
+    they cooperate better with the treatment.
+  </p>
+</div>
+
+<div class="vlog-block">
+  <h3>Why We Avoid False Promises</h3>
+  <p>
+    One thing we decided early on was never to promise instant results. Ayurveda
+    does not work on timelines created by marketing. It works on timelines created
+    by the body itself.
+  </p>
+</div>
+
+<div class="vlog-block">
+  <p>
+    Many patients appreciate honesty. Some patients want quick fixes. We respect
+    both, but we never compromise on principles. This is what has built trust
+    since 2015.
+  </p>
+</div>
+
+<div class="vlog-block">
+  <h3>Growth Through Trust</h3>
+  <p>
+    Over the years, SEJ Ayurveda grew not because of advertisements, but because
+    of word of mouth. Patients who experienced stability referred others.
+  </p>
+</div>
+
+<div class="vlog-block">
+  <p>
+    Every referral carried responsibility. Every new patient meant we had to
+    maintain the same level of care, patience, and ethical practice.
+  </p>
+</div>
+
+<div class="vlog-block">
+  <h3>Message to Patients</h3>
+  <p>
+    If you are suffering from a chronic skin condition, understand one thing clearly —
+    healing is possible, but it requires commitment from both sides. Ayurveda works
+    when you work with it.
+  </p>
+</div>
+
+<div class="vlog-block">
+  <p>
+    SEJ Ayurveda is not just a clinic. It is a journey that started in 2015 and
+    continues with the same values today — authenticity, patience, and long-term care.
+  </p>
+</div>
+
+<!-- 🔁 COPY THE ABOVE vlog-block FORMAT -->
+<!-- 🔁 KEEP ADDING MORE STORIES, DAILY ROUTINE, PATIENT EDUCATION, CEO THOUGHTS -->
+<!-- 🔁 50–60 BLOCKS = 700+ LINES EASILY -->
+
+<!-- ================= CLINIC ================= -->
+<section class="section clinic">
+  <div class="container">
+    <h2>Our Clinic & Care Philosophy</h2>
+    <p>
+      SEJ Ayurveda operates as a holistic Ayurvedic clinic where treatment is not rushed.
+      Each patient receives time, explanation, and education about their condition.
+    </p>
+    <p>
+      Our focus remains on long-term healing rather than instant cosmetic outcomes.
+    </p>
+  </div>
+</section>
+
+<!-- ================= CONTACT US ================= -->
+<section class="section">
+  <div class="container">
+    <h2>Contact Us</h2>
+
+    <div class="contact-box">
+      <form
+        action="mailto:sejayurveda@gmail.com"
+        method="post"
+        enctype="text/plain">
+
+        <input type="text" name="Name" placeholder="Your Name" required>
+        <input type="email" name="Email" placeholder="Your Email" required>
+        <input type="tel" name="Phone" placeholder="Phone Number">
+        <textarea name="Message" placeholder="Write your message..." required></textarea>
+
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+  </div>
+</section>
+<!-- ===== FLOATING WHATSAPP BUTTON ===== -->
+<a href="javascript:void(0)"
+   class="whatsapp-float"
+   onclick="openWhatsApp()"
+   aria-label="Chat on WhatsApp">
+   <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
+        alt="WhatsApp Chat">
+</a>
+
+<style>
+/* ===== WHATSAPP FLOATING BUTTON ===== */
+.whatsapp-float{
+  position:fixed;
+  bottom:22px;
+  right:22px;
+  width:58px;
+  height:58px;
+  background:#25D366;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  box-shadow:0 12px 30px rgba(37,211,102,.45);
+  z-index:9999;
+  cursor:pointer;
+  transition:.3s;
+}
+.whatsapp-float img{
+  width:30px;
+  height:30px;
+}
+.whatsapp-float:hover{
+  transform:scale(1.08);
+  background:#1ebe5d;
+}
+
+/* Mobile safe spacing */
+@media(max-width:600px){
+  .whatsapp-float{
+    bottom:16px;
+    right:16px;
+  }
+}
+</style>
+
+<script>
+function openWhatsApp(){
+  const phone = "919870317940"; // ✅ correct format
+  const message = "Hello SEJ Ayurveda, I want consultation.";
+
+  const isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+  const url = isMobile
+    ? "https://wa.me/" + phone + "?text=" + encodeURIComponent(message)
+    : "https://web.whatsapp.com/send?phone=" + phone + "&text=" + encodeURIComponent(message);
+
+  window.open(url, "_blank");
+}
+</script>
+<!-- ===== END WHATSAPP BUTTON ===== -->
+
+<!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-flex">
+      <p>© 2015 SEJ Ayurveda. All rights reserved.</p> |      
+      <a href="../legal/privacy.html">Privacy Policy</a> |
+      <a href="../legal/terms.html">Terms</a> |
+      <a href="../legal/refund.html">Refund</a> |
+      <a href="../legal/about.html">About Us</a> |
+    </div>
+  </footer>
+
+</body>
+</html>

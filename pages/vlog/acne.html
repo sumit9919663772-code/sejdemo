@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Acne & Pimples | Ayurveda Insights – SEJ Ayurveda</title>
+
+<meta name="description"
+content="Understand acne and pimples through Ayurveda. Learn causes, lifestyle factors, what to do, what to avoid and how Ayurvedic care supports long-term skin balance.">
+
+<link rel="icon" href="../../favicon.png">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+
+body{
+  font-family:'Poppins',sans-serif;
+  background:#f8fafc;
+  color:#1f2937;
+  padding-top:80px;
+}
+.container{max-width:1200px;margin:auto;padding:0 20px}
+a{text-decoration:none;color:inherit}
+
+/* ===== HEADER (INDEX EXACT) ===== */
+.header{
+  position:fixed;
+  top:0;left:0;right:0;
+  height:80px;
+  background:rgba(255,255,255,.96);
+  backdrop-filter:blur(20px);
+  border-bottom:1px solid rgba(16,185,129,.2);
+  z-index:1000;
+}
+.navbar{
+  height:80px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+.nav-brand img{height:44px}
+
+.nav-menu{
+  display:flex;
+  list-style:none;
+  gap:2.8rem;
+}
+.nav-link{
+  font-size:15px;
+  font-weight:500;
+  color:#374151;
+  position:relative;
+}
+.nav-link::after{
+  content:'';
+  position:absolute;
+  left:50%;
+  bottom:-6px;
+  width:0;height:3px;
+  background:#10b981;
+  transform:translateX(-50%);
+  transition:.3s;
+}
+.nav-link:hover,
+.nav-link.active{color:#10b981}
+.nav-link:hover::after,
+.nav-link.active::after{width:100%}
+
+.nav-actions{
+  display:flex;
+  align-items:center;
+  gap:1.2rem;
+  min-width:260px;
+}
+.nav-actions span{
+  color:#059669;
+  font-weight:600;
+  font-size:14px;
+}
+.btn-outline{
+  border:2px solid #10b981;
+  padding:11px 22px;
+  border-radius:12px;
+  color:#10b981;
+  font-weight:500;
+}
+.btn-outline:hover{background:#10b981;color:#fff}
+
+.cart-btn{
+  position:relative;
+  width:44px;
+  height:44px;
+  border:2px solid #e5e7eb;
+  border-radius:12px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+.cart-btn img{width:18px}
+.cart-count{
+  position:absolute;
+  top:-6px;
+  right:-6px;
+  width:18px;
+  height:18px;
+  background:#ef4444;
+  color:#fff;
+  font-size:11px;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+/* ===== HERO ===== */
+.page-hero{
+  background:linear-gradient(135deg,#f0fdf4,#ecfeff);
+  padding:6rem 0 4rem;
+}
+.page-hero .zigzag{
+  align-items:center;
+}
+.page-title{
+  font-size:clamp(2.4rem,5vw,3.6rem);
+  font-weight:700;
+  background:linear-gradient(135deg,#0f172a,#10b981);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+.page-subtitle{
+  margin-top:1.2rem;
+  font-size:1.1rem;
+  color:#475569;
+}
+
+/* ===== ZIG ZAG SECTIONS ===== */
+.section{padding:5.5rem 0;background:#ffffff}
+.section.alt{background:#f0fdf4}
+.zigzag{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:3.5rem;
+  align-items:center;
+}
+.zigzag h2{color:#10b981;margin-bottom:1rem}
+.zigzag p{color:#475569;line-height:1.8}
+.zigzag ul{padding-left:18px}
+.zigzag li{margin-bottom:.6rem;color:#475569}
+.zigzag img{
+  width:100%;
+  border-radius:22px;
+  box-shadow:0 20px 40px rgba(0,0,0,.12);
+}
+
+/* FOOTER */
+.footer{
+  background:#0f172a;
+  color:#cbd5f5;
+  padding:2.5rem 0;
+  text-align:center;
+}
+.footer span{color:#10b981}
+
+@media(max-width:900px){
+  .nav-menu{display:none}
+  .zigzag{grid-template-columns:1fr;text-align:center}
+}
+</style>
+</head>
+
+<body>
+
+<header class="header">
+<nav class="navbar container">
+  <div class="nav-brand">
+    <a href="../../index.html">
+      <img src="../../assets/images/logo/sej-logo-dark.png">
+    </a>
+  </div>
+
+  <ul class="nav-menu">
+    <li><a href="../../index.html" class="nav-link">Home</a></li>
+    <li><a href="../diseases/" class="nav-link">Diseases</a></li>
+    <li><a href="../kits/" class="nav-link">Treatment Kits</a></li>
+    <li><a href="../consultation/" class="nav-link">Consultation</a></li>
+    <li><a href="../reviews/" class="nav-link">Reviews</a></li>
+    <li><a href="./index.html" class="nav-link active">Vlog</a></li>
+  </ul>
+
+  <div class="nav-actions">
+    <span>5000+ Patients</span>
+    <a href="../consultation/" class="btn-outline">Consult Now</a>
+    <a href="../checkout/" class="cart-btn">
+      <img src="../../assets/images/ui/c.png">
+      <span class="cart-count">0</span>
+    </a>
+  </div>
+</nav>
+</header>
+
+<!-- HERO -->
+<section class="page-hero">
+<div class="container zigzag">
+  <div>
+    <h1 class="page-title">Acne & Pimples</h1>
+    <p class="page-subtitle">
+      Ayurvedic understanding of acne, pimples, causes,
+      lifestyle care and long-term skin balance.
+    </p>
+  </div>
+  <img src="../../assets/images/vlog/acne/acne.png" alt="Acne Ayurveda">
+</div>
+</section>
+
+<!-- WHAT IS -->
+<section class="section">
+<div class="container zigzag">
+  <div>
+    <h2>What is Acne?</h2>
+    <p>
+      Acne is a common skin condition that develops when hair follicles (pores) become blocked with excess oil (sebum), dead skin cells, and bacteria. This blockage leads to inflammation and causes different types of skin lesions such as pimples, blackheads, whiteheads, and sometimes painful red bumps or cysts.
+    </p>
+
+    <p>
+      Acne most often appears on the face, but it can also affect the chest, back, shoulders, and neck. It is commonly seen during teenage years, but many adults experience acne as well.
+    </p>
+  </div>
+  <img src="../../assets/images/vlog/acne/cheek-acne.jpg" alt="Acne causes">
+</div>
+</section>
+
+<!-- CAUSES -->
+<section class="section alt">
+<div class="container zigzag">
+  <img src="../../assets/images/vlog/acne/acne-jawline-gloves-1200-628-facebook.png" alt="Lifestyle causes acne">
+  <div>
+<h2>Why Does Acne Occur?</h2>
+<p>
+  Acne occurs when internal and external factors disturb the normal functioning of the skin, leading to clogged pores and inflammation.
+</p>
+
+<ul>
+  <li><strong>Poor Digestion:</strong> Improper digestion can lead to toxin buildup in the body, which may reflect on the skin as acne.</li>
+  <li><strong>Hormonal Imbalance:</strong> Fluctuations in hormones increase oil production, making the skin more prone to breakouts.</li>
+  <li><strong>Stress:</strong> High stress levels trigger hormonal changes that stimulate excess sebum production.</li>
+  <li><strong>Wrong Food Habits:</strong> Frequent intake of oily, spicy, or junk food can worsen acne by affecting skin and digestion.</li>
+</ul>
+  </div>
+</div>
+</section>
+
+<!-- DO -->
+<section class="section">
+<div class="container zigzag">
+  <div>
+<h2>What to Do</h2>
+<p>
+  Managing acne requires a combination of proper skin care, healthy lifestyle habits, and internal balance. Following the right steps can help control breakouts and prevent future flare-ups.
+</p>
+
+<ul>
+  <li><strong>Keep your skin clean:</strong> Wash your face gently twice a day to remove excess oil and dirt.</li>
+  <li><strong>Avoid touching or picking pimples:</strong> This can increase inflammation and cause scars.</li>
+  <li><strong>Follow a healthy diet:</strong> Eat fresh fruits, vegetables, and light meals while avoiding oily and junk food.</li>
+  <li><strong>Manage stress:</strong> Practice relaxation techniques like meditation or deep breathing.</li>
+  <li><strong>Use suitable skincare products:</strong> Choose non-comedogenic and skin-friendly products.</li>
+  <li><strong>Stay hydrated:</strong> Drink enough water to support skin detoxification.</li>
+  <li><strong>Seek proper guidance:</strong> Consult a skin expert for personalized care if acne persists.</li>
+</ul>
+  </div>
+  <img src="../../assets/images/vlog/acne/how-to-get-rid-of-teenage-acne.png" alt="Healthy lifestyle">
+</div>
+</section>
+
+<!-- AVOID -->
+<section class="section alt">
+<div class="container zigzag">
+  <img src="../../assets/images/vlog/acne/1758610.jpg" alt="What to avoid in acne">
+  <div>
+<h2>What To Avoid</h2>
+<p>
+  Avoiding certain habits and triggers can help prevent acne from worsening and reduce the chances of new breakouts.
+</p>
+
+<ul>
+  <li><strong>Do not touch or pick pimples:</strong> This can increase inflammation and lead to scars or dark spots.</li>
+  <li><strong>Avoid oily and junk food:</strong> These foods can increase oil production and worsen acne.</li>
+  <li><strong>Do not use harsh skincare products:</strong> Strong soaps and scrubs can irritate the skin and trigger breakouts.</li>
+  <li><strong>Avoid heavy or pore-clogging cosmetics:</strong> Use non-comedogenic products only.</li>
+  <li><strong>Do not wash your face too often:</strong> Over-cleansing can dry out the skin and increase oil production.</li>
+  <li><strong>Avoid excessive stress:</strong> Stress can trigger hormonal changes that worsen acne.</li>
+  <li><strong>Do not ignore persistent acne:</strong> Delaying proper care can lead to long-term marks and scars.</li>
+</ul>
+  </div>
+</div>
+</section>
+
+<!-- AYURVEDA -->
+<section class="section">
+<div class="container zigzag">
+  <div>
+    <h2>How Ayurveda Helps</h2>
+    <p>
+      Ayurveda focuses on detoxifying the body, strengthening digestion
+      and balancing hormones naturally.
+    </p>
+  </div>
+  <img src="../../assets/images/vlog/acne/ayurveda.png" alt="Ayurvedic approach">
+</div>
+</section>
+<!-- ===== FLOATING WHATSAPP BUTTON ===== -->
+<a href="javascript:void(0)"
+   class="whatsapp-float"
+   onclick="openWhatsApp()"
+   aria-label="Chat on WhatsApp">
+   <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
+        alt="WhatsApp Chat">
+</a>
+
+<style>
+/* ===== WHATSAPP FLOATING BUTTON ===== */
+.whatsapp-float{
+  position:fixed;
+  bottom:22px;
+  right:22px;
+  width:58px;
+  height:58px;
+  background:#25D366;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  box-shadow:0 12px 30px rgba(37,211,102,.45);
+  z-index:9999;
+  cursor:pointer;
+  transition:.3s;
+}
+.whatsapp-float img{
+  width:30px;
+  height:30px;
+}
+.whatsapp-float:hover{
+  transform:scale(1.08);
+  background:#1ebe5d;
+}
+
+/* Mobile safe spacing */
+@media(max-width:600px){
+  .whatsapp-float{
+    bottom:16px;
+    right:16px;
+  }
+}
+</style>
+
+<script>
+function openWhatsApp(){
+  const phone = "919870317940"; // ✅ correct format
+  const message = "Hello SEJ Ayurveda, I want consultation.";
+
+  const isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+  const url = isMobile
+    ? "https://wa.me/" + phone + "?text=" + encodeURIComponent(message)
+    : "https://web.whatsapp.com/send?phone=" + phone + "&text=" + encodeURIComponent(message);
+
+  window.open(url, "_blank");
+}
+</script>
+<!-- ===== END WHATSAPP BUTTON ===== -->
+
+<!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-flex">
+      <p>© 2015 SEJ Ayurveda. All rights reserved.</p> |      
+      <a href="../legal/privacy.html">Privacy Policy</a> |
+      <a href="../legal/terms.html">Terms</a> |
+      <a href="../legal/refund.html">Refund</a> |
+      <a href="../legal/about.html">About Us</a> |
+    </div>
+  </footer>
+</body>
+</html>
